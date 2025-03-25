@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
+</head>
+
+<body class="ethic-light" onload="loadPage()">
+
+    <!-- Halaman Enter -->
+    <div id="enter-page"
+        class="fixed inset-0 flex flex-col justify-center items-center bg-white space-y-25 text-neutral-750">
+        <div class="enter-logo"><img class="w-10" src="assets/logo/enter-logo.png" alt="logo"></div>
+        <div class="display flex justify-center items-center">
+            <div id="flower"
+                class="flower bg-[url(./assets/logo/flower.png)] opacity-95 bg-cover bg-center bg-no-repeat w-70 h-70 md:w-96 md:h-96">
+            </div>
+            <p class="fixed text-6xl md:text-7xl text-center">
+                <span>Kiandra</span>
+                <span class="italic">Photography</span>
+            </p>
+        </div>
+        <a href="#home-page"><button id="enter-btn"
+                class="cursor-pointer bg-transparant border border-neutral-600 px-7 py-1 rounded-3xl text-3xl">Enter</button></a>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed -top-1 inset-0 flex flex-col justify-center items-center hidden">
+        <div class="display flex justify-center items-center">
+            <div id="flower-enter"
+                class="flower bg-[url(./assets/logo/flower.png)] opacity-95 bg-cover bg-center bg-no-repeat w-70 h-70 md:w-96 md:h-96 animate-pulse">
+            </div>
+        </div>
+    </div>
+
+    <!-- Halaman Home -->
+    <div id="home-page" class="hidden">
+        <!-- Navbar -->
+        <nav
+            class="flex justify-between items-center py-5 px-7 fixed top-0 left-0 w-full z-50 backdrop-blur-lg text-white">
+            <img class="w-7" src="assets/logo/main-logo.png" alt="logo">
+
+            <a href="#" class="text-sm after:content-['_↗']">Book a meeting</a>
+
+            <button id="menuButton" onclick="toggleModal()" class="cursor-pointer transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" id="hamburgerIcon"
+                    class="h-8 w-8 transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" id="closeIcon"
+                    class="h-8 w-8 hidden transition-transform duration-300" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+        </nav>
+
+        <!-- Header -->
+        <header class="h-dvh bg-[url(assets/photography-assets/header-bg.png)] bg-cover bg-center bg-no-repeat">
+            <div
+                class="header-text w-full h-full px-5 md:px-[250px] flex flex-col justify-center items-center text-center fixed z-10 ethic-medium">
+                <h1 class="text-white text-2xl md:text-3xl md:text-5xl leading-8 md:leading-15">Love <span
+                        class="italic">is not
+                        just
+                        felt</span>, but
+                    <span>ETERNALLY</span> preserved—Kiandra Photography frames
+                    every <span class="italic">precious moment.</span>
+                </h1>
+            </div>
+            <div class="relative pt-45 w-full overflow-hidden">
+                <div class="flex" id="carousel">
+                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                        <img src="assets/photography-assets/carousel-1.png" alt="Carousel Image 1"
+                            class="w-65 h-91 md:w-70 md:h-96 object-cover">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                        <img src="assets/photography-assets/carousel-2.png" alt="Carousel Image 2"
+                            class="w-65 h-91 md:w-70 md:h-96 object-cover">
+                    </div>
+                    <div class="w-full flex-shrink-0 flex items-center justify-center">
+                        <img src="assets/photography-assets/carousel-3.png" alt="Carousel Image 3"
+                            class="w-65 h-91 md:w-70 md:h-96 object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white animate-bounce" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 9l-7 7-7-7" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- Modal -->
+        <div id="menuModal" class="fixed inset-y-0 left-0 w-[500px] z-20 flex justify-center items-center backdrop-blur-lg 
+transition-all duration-300 transform scale-0 opacity-0 -translate-x-full">
+            <ul class="space-y-3 text-3xl text-white">
+                <li><a href="#" class="flex items-center underline underline-offset-4 decoration-1">Home</a></li>
+                <li class="relative group">
+                    <span class="cursor-pointer flex items-center hover:underline underline-offset-4 decoration-1">
+                        Portofolio
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 ml-2 -rotate-90 group-hover:rotate-none transition-all duration-300"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                    <ul class="w-66 absolute bg-neutral-900/75 shadow-sm rounded-sm hidden group-hover:block">
+                        <div class="text-xl space-y-2 px-6 py-5 backdrop-blur-lg rounded-sm ivyora-light">
+                            <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Wedding
+                                    Traditional</a>
+                            </li>
+                            <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Wedding
+                                    International</a>
+                            </li>
+                            <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Prewedding</a></li>
+                            <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Engagement</a></li>
+                            <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Video</a></li>
+                        </div>
+                    </ul>
+                </li>
+                <li><a href="#" class="hover:underline underline-offset-4 decoration-1">About Kiandra</a></li>
+                <li><a href="#" class="hover:underline underline-offset-4 decoration-1">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <script defer src="main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Medium.eot');
+    src: local('Ethic New Medium'), local('EthicNew-Medium'),
+        url('EthicNew-Medium.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Medium.woff2') format('woff2'),
+        url('EthicNew-Medium.woff') format('woff'),
+        url('EthicNew-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Extrabold.eot');
+    src: local('Ethic New Extrabold'), local('EthicNew-Extrabold'),
+        url('EthicNew-Extrabold.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Extrabold.woff2') format('woff2'),
+        url('EthicNew-Extrabold.woff') format('woff'),
+        url('EthicNew-Extrabold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Light.eot');
+    src: local('Ethic New Light'), local('EthicNew-Light'),
+        url('EthicNew-Light.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Light.woff2') format('woff2'),
+        url('EthicNew-Light.woff') format('woff'),
+        url('EthicNew-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-LightItalic.eot');
+    src: local('Ethic New Light Italic'), local('EthicNew-LightItalic'),
+        url('EthicNew-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-LightItalic.woff2') format('woff2'),
+        url('EthicNew-LightItalic.woff') format('woff'),
+        url('EthicNew-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-SemiboldItalic.eot');
+    src: local('Ethic New Semibold Italic'), local('EthicNew-SemiboldItalic'),
+        url('EthicNew-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-SemiboldItalic.woff2') format('woff2'),
+        url('EthicNew-SemiboldItalic.woff') format('woff'),
+        url('EthicNew-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Bold.eot');
+    src: local('Ethic New Bold'), local('EthicNew-Bold'),
+        url('EthicNew-Bold.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Bold.woff2') format('woff2'),
+        url('EthicNew-Bold.woff') format('woff'),
+        url('EthicNew-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-MediumItalic.eot');
+    src: local('Ethic New Medium Italic'), local('EthicNew-MediumItalic'),
+        url('EthicNew-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-MediumItalic.woff2') format('woff2'),
+        url('EthicNew-MediumItalic.woff') format('woff'),
+        url('EthicNew-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-BoldItalic.eot');
+    src: local('Ethic New Bold Italic'), local('EthicNew-BoldItalic'),
+        url('EthicNew-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-BoldItalic.woff2') format('woff2'),
+        url('EthicNew-BoldItalic.woff') format('woff'),
+        url('EthicNew-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Regular.eot');
+    src: local('Ethic New Regular'), local('EthicNew-Regular'),
+        url('EthicNew-Regular.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Regular.woff2') format('woff2'),
+        url('EthicNew-Regular.woff') format('woff'),
+        url('EthicNew-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-ExtraboldItalic.eot');
+    src: local('Ethic New Extrabold Italic'), local('EthicNew-ExtraboldItalic'),
+        url('EthicNew-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-ExtraboldItalic.woff2') format('woff2'),
+        url('EthicNew-ExtraboldItalic.woff') format('woff'),
+        url('EthicNew-ExtraboldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Italic.eot');
+    src: local('Ethic New Italic'), local('EthicNew-Italic'),
+        url('EthicNew-Italic.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Italic.woff2') format('woff2'),
+        url('EthicNew-Italic.woff') format('woff'),
+        url('EthicNew-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('EthicNew-Semibold.eot');
+    src: local('Ethic New Semibold'), local('EthicNew-Semibold'),
+        url('EthicNew-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('EthicNew-Semibold.woff2') format('woff2'),
+        url('EthicNew-Semibold.woff') format('woff'),
+        url('EthicNew-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

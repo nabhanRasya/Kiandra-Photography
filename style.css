@@ -1,0 +1,57 @@
+/* Animasi Slide Up */
+.slide-up {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Animasi Slide Down */
+.slide-down {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* Animasi Zoom Out */
+.zoom-out {
+    transform: scale(1.5);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 0.8s ease-out;
+}
+
+/* Animasi Fade In */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animasi Fade Out */
+.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Loading screen muncul dengan efek fade */
+.loading-screen {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}

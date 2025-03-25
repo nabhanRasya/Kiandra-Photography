@@ -1,0 +1,191 @@
+/* ETHIC FONT */
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Ethic New';
+    src: url('/assets/font/ethic-font/EthicNew-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* IVYORA FONT */
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('/assets/font/ivyora-font/IvyOra-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('/assets/font/ivyora-font/IvyOra-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('/assets/font/ivyora-font/IvyOra-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('/assets/font/ivyora-font/IvyOra-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'IvyOra Display';
+    src: url('/assets/font/ivyora-font/IvyOra-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* SWISS FONT */
+@font-face {
+    font-family: 'Swiss Neue';
+    src: url('/assets/font/swiss-font/SwissNeue-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swiss Neue';
+    src: url('/assets/font/swiss-font/SwissNeue-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swiss Neue';
+    src: url('/assets/font/swiss-font/SwissNeue-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Swiss Neue';
+    src: url('/assets/font/swiss-font/SwissNeue-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Swiss Neue';
+    src: url('/assets/font/swiss-font/SwissNeue-BoldItalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+
+
+.ethic-regular {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ethic-medium {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ethic-bold {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ethic-light {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ethic-italic {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.ethic-bold-italic {
+    font-family: 'Ethic New', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* IVYORA FONT */
+.ivyora-regular {
+    font-family: 'IvyOra Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.ivyora-bold {
+    font-family: 'IvyOra Display', sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.ivyora-light {
+    font-family: 'IvyOra Display', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.ivyora-italic {
+    font-family: 'IvyOra Display', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.ivyora-bold-italic {
+    font-family: 'IvyOra Display', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* SWISS NEUE FONT */
+.neue {
+    font-family: 'Neue', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
