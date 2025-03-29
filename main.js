@@ -117,12 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // Reset semua tombol ke warna default
       filterButtons.forEach((btn) => {
         btn.classList.remove("bg-black", "text-white");
-        btn.classList.add("bg-gray-200", "text-gray-800");
+        btn.classList.add("bg-neutral-200", "text-gray-800");
       });
 
       // Set tombol aktif ke warna hitam
       this.classList.add("bg-black", "text-white");
-      this.classList.remove("bg-gray-200", "text-gray-800");
+      this.classList.remove("bg-neutral-200", "text-gray-800");
 
       // Filter gambar berdasarkan kategori
       photos.forEach((photo) => {
