@@ -59,3 +59,34 @@
 .persuasive-img {
     filter: grayscale(100%);
 }
+
+/* Styling for the filter slider */
+.filter-slider-container {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    overflow-x: auto;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Styling for the buttons */
+.filter-btn {
+    flex-shrink: 0;
+    transition: background-color 0.3s;
+}
+
+/* Styling for button active and hover states */
+.filter-btn:active,
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Optional: Add smooth scrolling for mobile devices */
+.filter-slider-container {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Remove the scroll bar */
+.filter-slider-container::-webkit-scrollbar {
+    display: none;
+}
