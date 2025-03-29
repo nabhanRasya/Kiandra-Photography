@@ -1,8 +1,52 @@
 document.addEventListener("DOMContentLoaded", function () {
   loadPage();
   initCarousel();
-  setupMenuToggle();
+  initModal(); // Panggil fungsi untuk mengatur modal hanya sekali
 });
+
+function initModal() {
+  const modal = document.getElementById("menuModal");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const closeIcon = document.getElementById("closeIcon");
+
+  if (!modal || !hamburgerIcon || !closeIcon) {
+    console.error("Salah satu elemen dalam toggleModal tidak ditemukan.");
+    return;
+  }
+
+  hamburgerIcon.addEventListener("click", () => {
+    modal.classList.remove("scale-0", "opacity-0", "-translate-x-full");
+    modal.classList.add("scale-100", "opacity-100", "translate-x-0");
+    hamburgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
+  });
+
+  closeIcon.addEventListener("click", () => {
+    modal.classList.remove("scale-100", "opacity-100", "translate-x-0");
+    modal.classList.add("scale-0", "opacity-0", "-translate-x-full");
+    hamburgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  });
+}
+
+function initCarousel() {
+  const carousel = document.getElementById("carousel");
+  if (!carousel) {
+    console.error("Elemen carousel tidak ditemukan.");
+    return;
+  }
+
+  let index = 0;
+  const slides = carousel.children;
+  const totalSlides = slides.length;
+
+  function moveCarousel() {
+    index = (index + 1) % totalSlides;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(moveCarousel, 3000); // Ganti gambar setiap 3 detik
+}
 
 function loadPage() {
   const enterButton = document.getElementById("enter-btn");
@@ -54,27 +98,40 @@ function loadPage() {
   });
 }
 
-function toggleModal() {
-  const modal = document.getElementById("menuModal");
-  const hamburgerIcon = document.getElementById("hamburgerIcon");
-  const closeIcon = document.getElementById("closeIcon");
-
-  if (!modal || !hamburgerIcon || !closeIcon) {
-    console.error("Salah satu elemen dalam toggleModal tidak ditemukan.");
-    return;
-  }
-
-  hamburgerIcon.addEventListener("click", () => {
-    modal.classList.remove("scale-0", "opacity-0", "-translate-x-full");
-    modal.classList.add("scale-100", "opacity-100", "translate-x-0");
-    hamburgerIcon.classList.add("hidden");
-    closeIcon.classList.remove("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      document.getElementById("enter-btn").click();
+    }
   });
+});
 
-  closeIcon.addEventListener("click", () => {
-    modal.classList.remove("scale-100", "opacity-100", "translate-x-0");
-    modal.classList.add("scale-0", "opacity-0", "-translate-x-full");
-    hamburgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
+document.addEventListener("DOMContentLoaded", function () {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const photos = document.querySelectorAll(".photo-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const category = this.dataset.category;
+
+      // Reset semua tombol ke warna default
+      filterButtons.forEach((btn) => {
+        btn.classList.remove("bg-black", "text-white");
+        btn.classList.add("bg-gray-200", "text-gray-800");
+      });
+
+      // Set tombol aktif ke warna hitam
+      this.classList.add("bg-black", "text-white");
+      this.classList.remove("bg-gray-200", "text-gray-800");
+
+      // Filter gambar berdasarkan kategori
+      photos.forEach((photo) => {
+        if (category === "all" || photo.dataset.category === category) {
+          photo.classList.remove("hidden");
+        } else {
+          photo.classList.add("hidden");
+        }
+      });
+    });
   });
-}
+});
