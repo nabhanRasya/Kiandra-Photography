@@ -1,0 +1,137 @@
+<!-- Portofolio -->
+<section class="portfolio py-12">
+  <div class="container mx-auto px-10">
+    <h1 class="text-7xl text-start mb-12">Portfolio</h1>
+
+    <!-- Filter Slider -->
+    <div
+      id="filter-slider"
+      class="filter-slider-container mb-12 space-x-1 pb-8"
+    >
+      <button
+        data-category="all"
+        class="filter-btn px-4 py-2 rounded-full bg-black text-white hover:bg-neutral-300 active:bg-black cursor-pointer active"
+      >
+        All
+      </button>
+      <button
+        data-category="wedding-traditional"
+        class="filter-btn px-4 py-2 rounded-full bg-neutral-200 hover:bg-neutral-300 active:bg-black cursor-pointer text-gray-800"
+      >
+        Wedding Traditional
+      </button>
+      <button
+        data-category="wedding-international"
+        class="filter-btn px-4 py-2 rounded-full bg-neutral-200 hover:bg-neutral-300 active:bg-black cursor-pointer text-gray-800"
+      >
+        Wedding International
+      </button>
+      <button
+        data-category="prewedding"
+        class="filter-btn px-4 py-2 rounded-full bg-neutral-200 hover:bg-neutral-300 active:bg-black cursor-pointer text-gray-800"
+      >
+        Prewedding
+      </button>
+      <button
+        data-category="engagement"
+        class="filter-btn px-4 py-2 rounded-full bg-neutral-200 hover:bg-neutral-300 active:bg-black cursor-pointer text-gray-800"
+      >
+        Engagement
+      </button>
+      <button
+        data-category="video"
+        class="filter-btn px-4 py-2 rounded-full bg-neutral-200 hover:bg-neutral-300 active:bg-black cursor-pointer text-gray-800"
+      >
+        Video
+      </button>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+      <!-- Wedding Traditional -->
+      <div
+        data-category="wedding-traditional"
+        class="photo-item overflow-hidden shadow-lg group relative"
+      >
+        <img
+          src="assets/photography-assets/carousel-1.png"
+          alt="Wedding Traditional"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 backdrop-blur-sm text-white text-center py-4 opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+          Wedding Traditional
+        </div>
+      </div>
+
+      <!-- Wedding International -->
+      <div
+        data-category="wedding-international"
+        class="photo-item overflow-hidden shadow-lg group relative"
+      >
+        <img
+          src="assets/photography-assets/carousel-2.png"
+          alt="Wedding International"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 backdrop-blur-sm text-white text-center py-4 opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+          Wedding International
+        </div>
+      </div>
+
+      <!-- Prewedding -->
+      <div
+        data-category="prewedding"
+        class="photo-item overflow-hidden shadow-lg group relative"
+      >
+        <img
+          src="assets/photography-assets/carousel-3.png"
+          alt="Prewedding"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 backdrop-blur-sm text-white text-center py-4 opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+          Prewedding
+        </div>
+      </div>
+
+      <!-- Engagement -->
+      <div
+        data-category="engagement"
+        class="photo-item overflow-hidden shadow-lg group relative"
+      >
+        <img
+          src="assets/photography-assets/carousel-1.png"
+          alt="Engagement"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 backdrop-blur-sm text-white text-center py-4 opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+          Engagement
+        </div>
+      </div>
+
+      <!-- Video -->
+      <div
+        data-category="video"
+        class="photo-item overflow-hidden shadow-lg group relative"
+      >
+        <img
+          src="assets/photography-assets/carousel-2.png"
+          alt="Video"
+          class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 backdrop-blur-sm text-white text-center py-4 opacity-0 group-hover:opacity-100 transition-opacity"
+        >
+          Video
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

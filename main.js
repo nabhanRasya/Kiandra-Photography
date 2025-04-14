@@ -93,7 +93,7 @@ function loadPage() {
           homePage.classList.remove("hidden");
           homePage.classList.add("fade-in");
         }, 1000); // Waktu yang sama dengan animasi fade-out
-      }, 1000); // Lama tampilan loading screen
+      }, 2000); // Lama tampilan loading screen
     }, 1000); // Tunggu animasi enter-page selesai sebelum loading screen
   });
 }
@@ -134,4 +134,23 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+});
+
+// Review
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
 });

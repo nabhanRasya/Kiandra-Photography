@@ -1,86 +1,97 @@
 /* Animasi Slide Up */
 .slide-up {
-    transform: translateY(-50px);
-    opacity: 0;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Animasi Slide Down */
 .slide-down {
-    transform: translateY(50px);
-    opacity: 0;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
 /* Animasi Zoom Out */
 .zoom-out {
-    transform: scale(1.5);
-    opacity: 0;
-    transition: transform 1s ease-out, opacity 0.8s ease-out;
+  transform: scale(1.5);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 0.8s ease-out;
 }
 
 /* Animasi Fade In */
 .fade-in {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Animasi Fade Out */
 .fade-out {
-    animation: fadeOut 0.8s forwards;
+  animation: fadeOut 0.8s forwards;
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
+  from {
+    opacity: 1;
+  }
 
-    to {
-        opacity: 0;
-    }
+  to {
+    opacity: 0;
+  }
 }
 
 /* Loading screen muncul dengan efek fade */
 .loading-screen {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
 }
 
 .persuasive-img {
-    filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 /* Styling for the filter slider */
 .filter-slider-container {
-    display: flex;
-    gap: 1rem;
-    padding-bottom: 1rem;
-    overflow-x: auto;
-    border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 /* Styling for the buttons */
 .filter-btn {
-    flex-shrink: 0;
-    transition: background-color 0.3s;
+  flex-shrink: 0;
+  transition: background-color 0.3s;
 }
 
 /* Optional: Add smooth scrolling for mobile devices */
 .filter-slider-container {
-    -webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Remove the scroll bar */
 .filter-slider-container::-webkit-scrollbar {
-    display: none;
+  display: none;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
