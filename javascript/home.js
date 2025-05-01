@@ -1,7 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
-  loadPage();
   initCarousel();
-  initModal(); // Panggil fungsi untuk mengatur modal hanya sekali
+
+  const loadingScreen = document.getElementById("loading-screen");
+  const homePage = document.getElementById("home-page");
+
+  if (!loadingScreen || !homePage) {
+    console.error("Elemen loading atau home tidak ditemukan.");
+    return;
+  }
+
+  // Saat seluruh konten termasuk gambar sudah selesai dimuat
+  window.addEventListener("load", function () {
+    // Tambahkan efek fade-out pada loading screen
+    loadingScreen.classList.add(
+      "opacity-0",
+      "transition-opacity",
+      "duration-700",
+    );
+
+    setTimeout(() => {
+      // Sembunyikan loading screen dan tampilkan home
+      loadingScreen.classList.add("hidden");
+      homePage.classList.remove("hidden");
+      homePage.classList.add(
+        "opacity-100",
+        "transition-opacity",
+        "duration-700",
+      );
+
+      // Inisialisasi modal setelah halaman betul-betul siap
+      initModal();
+    }, 700);
+  });
+
+  // Add click event listeners to service cards
+  const serviceCards = document.querySelectorAll('.service .grid > div:not(:last-child)');
+  serviceCards.forEach(card => {
+    card.addEventListener('click', function() {
+      window.location.href = 'clientDummy.html';
+    });
+    // Add cursor pointer style
+    card.style.cursor = 'pointer';
+  });
 });
 
 function initModal() {
@@ -48,38 +88,7 @@ function initCarousel() {
   setInterval(moveCarousel, 3000); // Ganti gambar setiap 3 detik
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  const loadingScreen = document.getElementById("loading-screen");
-  const homePage = document.getElementById("home-page");
-
-  if (!loadingScreen || !homePage) {
-    console.error("Elemen loading atau home tidak ditemukan.");
-    return;
-  }
-
-  // Saat seluruh konten termasuk gambar sudah selesai dimuat
-  window.addEventListener("load", function () {
-    // Tambahkan efek fade-out pada loading screen
-    loadingScreen.classList.add(
-      "opacity-0",
-      "transition-opacity",
-      "duration-700"
-    );
-
-    setTimeout(() => {
-      // Sembunyikan loading screen dan tampilkan home
-      loadingScreen.classList.add("hidden");
-      homePage.classList.remove("hidden");
-      homePage.classList.add(
-        "opacity-100",
-        "transition-opacity",
-        "duration-700"
-      );
-    }, 700);
-  });
-});
-
-// Review
+// Inisialisasi Swiper
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,

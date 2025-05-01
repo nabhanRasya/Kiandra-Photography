@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-grayscale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../assets/font/font.css" />
+    <!-- HTML Slider Review Tanpa React -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <title>Kiandra Photography</title>
+  </head>
+
+  <body class="ethic-light bg-neutral-100 pt-20">
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50"
+    >
+      <div class="relative flex justify-center items-center">
+        <!-- Flower Background Animation -->
+        <div
+          id="flower-enter"
+          class="bg-[url('../assets/logo/flower.png')] opacity-90 bg-cover bg-center bg-no-repeat w-64 h-64 md:w-80 md:h-80 animate-pulse"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Home Page -->
+    <div id="portofolio-page" class="hidden">
+      <my-navbar></my-navbar>
+
+      <!-- Portofolio -->
+      <section class="portfolio py-12">
+        <div id="portofolio-page">
+          <div class="container max-w-6xl mx-auto px-4 md:px-10">
+            <h1
+              class="text-6xl md:text-7xl text-start mb-8 md:mb-10 text-neutral-700"
+            >
+              Portfolio
+            </h1>
+
+            <!-- Filter Slider -->
+            <div class="relative">
+              <div
+                id="filter-slider"
+                class="filter-slider-container overflow-x-auto whitespace-nowrap mb-10 scrollbar-hide relative"
+              >
+                <div class="inline-flex space-x-2">
+                  <button
+                    data-category="all"
+                    class="filter-btn active px-5 py-2 text-sm ivyora-light bg-neutral-800 border border-neutral-300 text-white hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    All
+                  </button>
+                  <button
+                    data-category="wedding-traditional"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Wedding Traditional
+                  </button>
+                  <button
+                    data-category="wedding-international"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Wedding International
+                  </button>
+                  <button
+                    data-category="prewedding"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Prewedding
+                  </button>
+                  <button
+                    data-category="engagement"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Engagement
+                  </button>
+                  <button
+                    data-category="video"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Video
+                  </button>
+                  <button
+                    data-category="geatheringAndEvent"
+                    class="filter-btn px-5 py-2 text-sm ivyora-light bg-neutral-50 border border-neutral-300 text-neutral-800 hover:bg-neutral-800 hover:text-white rounded-full transition duration-300 uppercase tracking-wider"
+                  >
+                    Gathering & Event
+                  </button>
+                </div>
+              </div>
+              <!-- Scroll Indicators -->
+              <div class="absolute left-0 top-1/3 -translate-y-1/2 bg-gradient-to-r from-neutral-100 to-transparent w-12 h-full pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-left-indicator">
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 text-neutral-750">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </div>
+              </div>
+              <div class="absolute right-0 top-1/3 -translate-y-1/2 bg-gradient-to-l from-neutral-100 to-transparent w-12 h-full pointer-events-none opacity-0 transition-opacity duration-300" id="scroll-right-indicator">
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 text-neutral-750">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image Grid -->
+            <div
+              id="photo-grid" 
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7"
+            >
+              <!-- Wedding Traditional -->
+              <div
+                data-category="wedding-traditional"
+                class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                style="cursor: pointer;"
+                onclick="window.location.href='clientDummy.html'"
+              >
+                <img
+                  src="../assets/photography-assets/carousel-1.png"
+                  alt="Wedding Traditional - Anindya & Rama"
+                  class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                >
+                  <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                    Wedding Traditional
+                  </p>
+                  <h3 class="text-xl font-medium group-hover:text-neutral-50">Anindya & Rama</h3>
+                </div>
+              </div>
+              <a href="clientDummy.html">
+                <div
+                  data-category="wedding-traditional"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-1.png"
+                    alt="Wedding Traditional - Anindya & Rama"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding Traditional
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Anindya & Rama</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="wedding-traditional"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-1.png"
+                    alt="Wedding Traditional - Anindya & Rama"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding Traditional
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Anindya & Rama</h3>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Wedding International -->
+              <a href="clientDummy.html">
+                <div
+                  data-category="wedding-international"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding International - Sarah & James"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding International
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Sarah & James</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="wedding-international"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding International - Sarah & James"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding International
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Sarah & James</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="wedding-international"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding International - Sarah & James"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding International
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Sarah & James</h3>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Prewedding -->
+              <a href="clientDummy.html">
+                <div
+                  data-category="prewedding"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-3.png"
+                    alt="Prewedding - Maya & Dito"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Prewedding</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Maya & Dito</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="prewedding"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-3.png"
+                    alt="Prewedding - Maya & Dito"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Prewedding</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Maya & Dito</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="prewedding"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-3.png"
+                    alt="Prewedding - Maya & Dito"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Prewedding</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Maya & Dito</h3>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Engagement -->
+              <a href="clientDummy.html">
+                <div
+                  data-category="engagement"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-1.png"
+                    alt="Engagement - Amelia & Farhan"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Engagement</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Amelia & Farhan</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="engagement"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-1.png"
+                    alt="Engagement - Amelia & Farhan"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Engagement</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Amelia & Farhan</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="engagement"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-1.png"
+                    alt="Engagement - Amelia & Farhan"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">Engagement</p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Amelia & Farhan</h3>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Video -->
+              <a href="clientDummy.html">
+                <div
+                  data-category="video"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding Video - Karina & Leo"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding Video
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Karina & Leo</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="video"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding Video - Karina & Leo"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding Video
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Karina & Leo</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="video"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Wedding Video - Karina & Leo"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Wedding Video
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Karina & Leo</h3>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Gathering & Event -->
+              <a href="clientDummy.html">
+                <div
+                  data-category="geatheringAndEvent"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Gathering & Event - Corporate Event"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Gathering & Event
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Corporate Event</h3>
+                  </div>
+                </div>
+              </a>
+              <a href="clientDummy.html">
+                <div
+                  data-category="geatheringAndEvent"
+                  class="photo-item overflow-hidden shadow-lg group relative rounded-3xl transition-all duration-500 cursor-pointer hover:scale-[1.02]"
+                >
+                  <img
+                    src="../assets/photography-assets/carousel-2.png"
+                    alt="Gathering & Event - Birthday Party"
+                    class="w-full h-64 sm:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300"
+                  ></div>
+                  <div
+                    class="absolute bottom-0 left-0 right-0 p-4 ps-7 text-white transform transition-transform duration-300 group-hover:translate-y-[-5px]"
+                  >
+                    <p class="text-sm ivyora-light opacity-90 mb-1 group-hover:text-neutral-200">
+                      Gathering & Event
+                    </p>
+                    <h3 class="text-xl font-medium group-hover:text-neutral-50">Birthday Party</h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <!-- No Results Message -->
+            <div
+              id="no-results"
+              class="hidden text-center py-16 text-neutral-500"
+            >
+              <p class="text-xl">No items found for this category.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <my-footer></my-footer>
+      <my-bookingmodal></my-bookingmodal>
+      <my-menumodal></my-menumodal>
+    </div>
+
+    <!-- Component scripts -->
+    <script
+      defer
+      src="../components/navbar-portofolio.js"
+      type="module"
+    ></script>
+    <script
+      defer
+      src="../components/footer-portofolio.js"
+      type="module"
+    ></script>
+    <script defer src="../components/menuModal.js" type="module"></script>
+    <script defer src="../components/bookingModal.js" type="module"></script>
+
+    <!-- Logic scripts -->
+    <script defer src="../javascript/main.js" type="module"></script>
+    <script defer src="../javascript/book.js" type="module"></script>
+    <script defer src="../javascript/portfolio.js"></script>
+  </body>
+</html>

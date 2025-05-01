@@ -2,21 +2,27 @@
 .slide-up {
   transform: translateY(-50px);
   opacity: 0;
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
 }
 
 /* Animasi Slide Down */
 .slide-down {
   transform: translateY(50px);
   opacity: 0;
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  transition:
+    transform 0.8s ease-out,
+    opacity 0.8s ease-out;
 }
 
 /* Animasi Zoom Out */
 .zoom-out {
   transform: scale(1.5);
   opacity: 0;
-  transition: transform 1s ease-out, opacity 0.8s ease-out;
+  transition:
+    transform 1s ease-out,
+    opacity 0.8s ease-out;
 }
 
 /* Animasi Fade In */
@@ -107,13 +113,35 @@
 
 /* Animation for photo items */
 .photo-item {
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.photo-item .hidden {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.photo-item .block {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: scale(1);
 }
 
-.photo-item.hidden {
-  display: none;
-  opacity: 0;
-  transform: translateY(20px);
+.modal-container {
+  backdrop-filter: blur(5px);
+}
+.modal-content {
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.modal-content::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+@media (min-width: 768px) {
+  .modal-content {
+    max-height: 80vh;
+    max-width: 90%;
+  }
 }
