@@ -7,23 +7,23 @@ class menuModal extends HTMLElement {
         <ul class="space-y-4 text-4xl text-white">
           <li>
             <a
-              href="index.html"
+              href="/index.html"
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">Home</a>
           </li>
           <li>
             <a
-              href="portofolio/portofolio.html"
+              href="/portofolio/portofolio.html"
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">Portofolio</a>
           </li>
           <li>
             <a
-              href="about.html"
+              href="/aboutKiandra.html"
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">About
               Kiandra</a>
           </li>
           <li>
             <a
-              href="contact.html"
+              href="/contact.html"
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">Contact</a>
           </li>
         </ul>

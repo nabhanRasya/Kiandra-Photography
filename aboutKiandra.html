@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="assets/font/font.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>About Kiandra - Kiandra Photography</title>
+  </head>
+
+  <body class="ethic-light bg-neutral-100">
+    <!-- Loading Screen -->
+    <div
+      id="loading-screen"
+      class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50"
+    >
+      <div class="relative flex justify-center items-center">
+        <!-- Flower Background Animation -->
+        <div
+          id="flower-enter"
+          class="bg-[url('assets/logo/flower.png')] opacity-90 bg-cover bg-center bg-no-repeat w-64 h-64 md:w-80 md:h-80 animate-pulse"
+        ></div>
+      </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="portofolio-page" class="hidden">
+      <my-navbar></my-navbar>
+
+      <!-- Hero Section -->
+      <section class="relative h-[60vh] bg-[url('assets/photography-assets/header-bg.png')] bg-cover bg-center bg-no-repeat">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64 ethic-regular">
+          <h1 class="text-4xl md:text-6xl text-white mb-4">Our Story</h1>
+          <p class="text-white text-lg md:text-xl max-w-2xl">
+            Capturing moments that tell your unique love story
+          </p>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about relative bg-white">
+        <div class="container mx-auto px-4 md:px-10 pt-20 pb-20">
+          <div class="max-w-4xl mx-auto">
+            <!-- Our Story -->
+            <div class="mb-20">
+              <h2 class="text-3xl md:text-4xl text-neutral-700 mb-8">Our Journey</h2>
+              <div class="prose prose-lg text-neutral-600">
+                <p>
+                  Founded in 2015, Kiandra Photography began as a passion project in the heart of Bogor. 
+                  What started as a small studio has grown into a team of dedicated photographers and 
+                  creatives who share a common vision: to capture the authentic emotions and unique 
+                  stories of each couple we work with.
+                </p>
+                <p>
+                  Our journey has taken us across Indonesia and beyond, documenting love stories in 
+                  various cultural settings. From traditional Javanese weddings to modern international 
+                  celebrations, we've had the privilege of being part of countless special moments.
+                </p>
+              </div>
+            </div>
+
+            <!-- Our Team -->
+            <div class="mb-20">
+              <h2 class="text-3xl md:text-4xl text-neutral-700 mb-8">Our Team</h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Team Member 1 -->
+                <div class="flex items-start space-x-4">
+                  <img
+                    src="assets/photography-assets/carousel-1.png"
+                    alt="Lead Photographer"
+                    class="w-24 h-24 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 class="text-xl font-medium text-neutral-700">Sarah Wijaya</h3>
+                    <p class="text-neutral-600">Lead Photographer & Founder</p>
+                    <p class="text-sm text-neutral-500 mt-2">
+                      With over 10 years of experience, Sarah brings a unique artistic vision to every project.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="flex items-start space-x-4">
+                  <img
+                    src="assets/photography-assets/carousel-1.png"
+                    alt="Creative Director"
+                    class="w-24 h-24 rounded-full object-cover"
+                  />
+                  <div>
+                    <h3 class="text-xl font-medium text-neutral-700">Michael Tan</h3>
+                    <p class="text-neutral-600">Creative Director</p>
+                    <p class="text-sm text-neutral-500 mt-2">
+                      Michael's background in fine arts brings a distinctive style to our photography.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Our Values -->
+            <div class="mb-20">
+              <h2 class="text-3xl md:text-4xl text-neutral-700 mb-8">Our Values</h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-medium text-neutral-700 mb-2">Artistic Excellence</h3>
+                  <p class="text-neutral-600">
+                    We strive for artistic excellence in every photograph, ensuring each image tells a story.
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-medium text-neutral-700 mb-2">Personal Connection</h3>
+                  <p class="text-neutral-600">
+                    Building personal connections with our clients to capture their authentic moments.
+                  </p>
+                </div>
+
+                <div class="text-center">
+                  <div class="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-neutral-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 class="text-xl font-medium text-neutral-700 mb-2">Trust & Reliability</h3>
+                  <p class="text-neutral-600">
+                    Building trust through reliable service and consistent quality in our work.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center">
+              <a href="contact.html">
+                <button
+                  class="cursor-pointer px-8 py-3 text-xl bg-neutral-800 text-white rounded-full hover:bg-neutral-700 transition duration-300"
+                >
+                  Get in Touch
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <my-footer></my-footer>
+      <my-bookingmodal></my-bookingmodal>
+      <my-menumodal></my-menumodal>
+    </div>
+
+    <!-- Component scripts -->
+    <script defer src="components/navbar.js" type="module"></script>
+    <script defer src="components/footer.js" type="module"></script>
+    <script defer src="components/menuModal.js" type="module"></script>
+    <script defer src="components/bookingModal.js" type="module"></script>
+
+    <!-- Logic scripts -->
+    <script defer src="javascript/main.js" type="module"></script>
+    <script defer src="javascript/book.js" type="module"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        loadPage();
+      });
+    </script>
+  </body>
+</html>

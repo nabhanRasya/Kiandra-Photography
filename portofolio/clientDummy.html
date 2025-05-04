@@ -1,11 +1,13 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-grayscale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../assets/font/font.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- HTML Slider Review Tanpa React -->
     <link
       rel="stylesheet"
@@ -36,12 +38,20 @@
       <!-- Navbar -->
       <my-navbar></my-navbar>
 
+      <!-- Hero Section -->
+      <section class="relative h-[60vh] bg-[url('../assets/photography-assets/header-bg.png')] bg-cover bg-center bg-no-repeat">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64 ethic-regular">
+          <h1 class="text-4xl md:text-6xl text-white mb-4">Anya & Reza</h1>
+          <p class="text-white text-lg md:text-xl max-w-2xl">
+            Capturing moments that tell your unique love story
+          </p>
+        </div>
+      </section>
+
       <!-- Post -->
       <section class="post">
         <div id="post-page">
-          <div
-            class="h-[500px] bg-[url('../assets/photography-assets/header-bg.png')] bg-cover bg-center bg-no-repeat"
-          ></div>
           <div class="container mx-auto px-4 md:px-10 pt-20">
             <h1 class="text-6xl md:text-7xl text-start mb-25 text-neutral-700">
               Anya & Reza
