@@ -3,6 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor. Learn about our team, values, and commitment to capturing your special moments." />
+    <meta name="keywords" content="Kiandra Photography, wedding photographer Bogor, professional photography studio, wedding photography team, photography values" />
+    <meta name="author" content="Kiandra Photography" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <meta property="og:title" content="About Kiandra Photography - Our Story & Team" />
+    <meta property="og:description" content="Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor. Learn about our team, values, and commitment to capturing your special moments." />
+    <meta property="og:image" content="https://kiandraphotography.com/assets/photography-assets/header-bg.png" />
+    <meta property="og:url" content="https://kiandraphotography.com/about" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kiandra Photography" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="About Kiandra Photography - Our Story & Team" />
+    <meta name="twitter:description" content="Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor." />
+    <meta name="twitter:image" content="https://kiandraphotography.com/assets/photography-assets/header-bg.png" />
+    <link rel="canonical" href="https://kiandraphotography.com/about" />
+    <link rel="alternate" hreflang="en" href="https://kiandraphotography.com/about" />
+    <link rel="alternate" hreflang="id" href="https://kiandraphotography.com/id/about" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="assets/font/font.css" />
@@ -12,22 +30,8 @@
   </head>
 
   <body class="ethic-light bg-neutral-100">
-    <!-- Loading Screen -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50"
-    >
-      <div class="relative flex justify-center items-center">
-        <!-- Flower Background Animation -->
-        <div
-          id="flower-enter"
-          class="bg-[url('assets/logo/flower.png')] opacity-90 bg-cover bg-center bg-no-repeat w-64 h-64 md:w-80 md:h-80 animate-pulse"
-        ></div>
-      </div>
-    </div>
-
     <!-- About Page -->
-    <div id="portofolio-page" class="hidden">
+    <div id="about-page">
       <my-navbar></my-navbar>
 
       <!-- Hero Section -->
@@ -44,7 +48,7 @@
       <!-- About Section -->
       <section class="about relative bg-white">
         <div class="container mx-auto px-4 md:px-10 pt-20 pb-20">
-          <div class="max-w-4xl mx-auto">
+          <div class="max-w-[1060px] mx-auto">
             <!-- Our Story -->
             <div class="mb-20">
               <h2 class="text-3xl md:text-4xl text-neutral-700 mb-8">Our Journey</h2>
@@ -176,6 +180,57 @@
       document.addEventListener("DOMContentLoaded", function () {
         loadPage();
       });
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      "name": "About Kiandra Photography",
+      "description": "Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor.",
+      "url": "https://kiandraphotography.com/about",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Kiandra Photography",
+        "foundingDate": "2015",
+        "description": "Professional wedding photography studio in Bogor, Indonesia",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bogor",
+          "addressRegion": "West Java",
+          "addressCountry": "ID"
+        },
+        "employee": [
+          {
+            "@type": "Person",
+            "name": "Sarah Wijaya",
+            "jobTitle": "Lead Photographer & Founder",
+            "description": "With over 10 years of experience, Sarah brings a unique artistic vision to every project."
+          },
+          {
+            "@type": "Person",
+            "name": "Michael Tan",
+            "jobTitle": "Creative Director",
+            "description": "Michael's background in fine arts brings a distinctive style to our photography."
+          }
+        ]
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://kiandraphotography.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://kiandraphotography.com/about"
+        }]
+      }
+    }
     </script>
   </body>
 </html>

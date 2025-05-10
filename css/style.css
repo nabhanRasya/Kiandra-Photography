@@ -56,12 +56,6 @@
   }
 }
 
-/* Loading screen muncul dengan efek fade */
-.loading-screen {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
 .persuasive-img {
   filter: grayscale(100%);
 }

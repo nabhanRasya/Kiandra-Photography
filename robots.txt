@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Sitemap: https://kiandraphotography.com/sitemap.xml
+
+# Disallow testing and temporary files
+Disallow: /testing.html
+Disallow: /temp/
+Disallow: /draft/
+
+# Allow all image files
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+
+# Crawl-delay for all bots
+Crawl-delay: 10 

@@ -1,37 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   initCarousel();
-
-  const loadingScreen = document.getElementById("loading-screen");
-  const homePage = document.getElementById("home-page");
-
-  if (!loadingScreen || !homePage) {
-    console.error("Elemen loading atau home tidak ditemukan.");
-    return;
-  }
-
-  // Saat seluruh konten termasuk gambar sudah selesai dimuat
-  window.addEventListener("load", function () {
-    // Tambahkan efek fade-out pada loading screen
-    loadingScreen.classList.add(
-      "opacity-0",
-      "transition-opacity",
-      "duration-700",
-    );
-
-    setTimeout(() => {
-      // Sembunyikan loading screen dan tampilkan home
-      loadingScreen.classList.add("hidden");
-      homePage.classList.remove("hidden");
-      homePage.classList.add(
-        "opacity-100",
-        "transition-opacity",
-        "duration-700",
-      );
-
-      // Inisialisasi modal setelah halaman betul-betul siap
-      initModal();
-    }, 700);
-  });
+  initModal();
 
   // Add click event listeners to service cards
   const serviceCards = document.querySelectorAll('.service .grid > div:not(:last-child)');

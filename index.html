@@ -3,6 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Kiandra Photography - Professional Wedding, Prewedding, and Engagement Photography Services in Bogor. Capturing your perfect moments with artistic styling and exceptional quality." />
+    <meta name="keywords" content="wedding photography, prewedding photography, engagement photography, bogor photographer, wedding photographer, professional photography, wedding specialist, bogor wedding photographer" />
+    <meta name="author" content="Kiandra Photography" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <meta property="og:title" content="Kiandra Photography - Wedding Specialist in Bogor" />
+    <meta property="og:description" content="Professional Wedding, Prewedding, and Engagement Photography Services in Bogor. Capturing your perfect moments with artistic styling." />
+    <meta property="og:image" content="https://kiandraphotography.com/assets/photography-assets/header-bg.png" />
+    <meta property="og:url" content="https://kiandraphotography.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kiandra Photography" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kiandra Photography - Wedding Specialist in Bogor" />
+    <meta name="twitter:description" content="Professional Wedding, Prewedding, and Engagement Photography Services in Bogor" />
+    <meta name="twitter:image" content="https://kiandraphotography.com/assets/photography-assets/header-bg.png" />
+    <link rel="canonical" href="https://kiandraphotography.com" />
+    <link rel="alternate" hreflang="en" href="https://kiandraphotography.com" />
+    <link rel="alternate" hreflang="id" href="https://kiandraphotography.com/id" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Kiandra Photography" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PhotographyBusiness",
+      "name": "Kiandra Photography",
+      "image": "https://kiandraphotography.com/assets/photography-assets/header-bg.png",
+      "description": "Professional Wedding, Prewedding, and Engagement Photography Services in Bogor",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogor",
+        "addressRegion": "West Java",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-6.5971",
+        "longitude": "106.8060"
+      },
+      "url": "https://kiandraphotography.com",
+      "telephone": "+62-XXX-XXXX-XXXX",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://instagram.com/kiandraphotography",
+        "https://facebook.com/kiandraphotography"
+      ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="assets/font/font.css" />
@@ -15,25 +79,12 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Kiandra Photography</title>
+    <title>Kiandra Photography - Wedding Specialist in Bogor</title>
   </head>
 
   <body class="ethic-light bg-neutral-100">
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50"
-    >
-      <div class="relative flex justify-center items-center">
-        <!-- Flower Background Animation -->
-        <div
-          id="flower-enter"
-          class="bg-[url('./assets/logo/flower.png')] opacity-90 bg-cover bg-center bg-no-repeat w-64 h-64 md:w-80 md:h-80 animate-pulse"
-        ></div>
-      </div>
-    </div>
-
     <!-- Home Page -->
-    <div id="home-page" class="hidden">
+    <div id="home-page">
       <my-navbar></my-navbar>
 
       <!-- Header -->
@@ -603,6 +654,19 @@
       document.addEventListener("DOMContentLoaded", function () {
         loadPage();
       });
+
+      // Register Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('ServiceWorker registration successful');
+            })
+            .catch(err => {
+              console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+      }
     </script>
   </body>
 </html>

@@ -17,69 +17,9 @@
   </head>
 
   <body class="ethic-light bg-neutral-100">
-    <!-- Loading Screen -->
-    <div
-      id="loading-screen"
-      class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50"
-    >
-      <div class="relative flex justify-center items-center">
-        <!-- Flower Background Animation -->
-        <div
-          id="flower-enter"
-          class="bg-[url('../../assets/logo/flower.png')] opacity-90 bg-cover bg-center bg-no-repeat w-64 h-64 md:w-80 md:h-80 animate-pulse"
-        ></div>
-      </div>
-    </div>
-
-    <!-- Home Page -->
-    <div id="portofolio-page" class="hidden">
-      <!-- Navbar -->
-      <nav
-        class="flex justify-between items-center py-5 px-4 md:px-[100px] fixed top-0 left-0 w-full z-50 bg-neutral-900/60 backdrop-blur-sm text-white"
-      >
-        <img
-          class="w-8"
-          src="../../assets/logo/main-logo.png"
-          alt="Main Logo"
-        />
-        <a href="#" class="text-md after:content-['_↗']">Book a meeting</a>
-        <button
-          id="menuButton"
-          onclick="initModal()"
-          class="transition-transform duration-300"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="hamburgerIcon"
-            class="h-9 w-9"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            id="closeIcon"
-            class="h-9 w-9 hidden"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </nav>
+    <!-- Portfolio Page -->
+    <div id="portofolio-page">
+      <my-navbar></my-navbar>
 
       <!-- Post -->
       <section class="post">

@@ -1,75 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
   initModal(); // Panggil fungsi untuk mengatur modal hanya sekali
-});
-
-function initModal() {
-  const modal = document.getElementById("menuModal");
-  const hamburgerIcon = document.getElementById("hamburgerIcon");
-  const closeIcon = document.getElementById("closeIcon");
-
-  if (!modal || !hamburgerIcon || !closeIcon) {
-    console.error("Salah satu elemen dalam toggleModal tidak ditemukan.");
-    return;
-  }
-
-  hamburgerIcon.addEventListener("click", () => {
-    modal.classList.remove("scale-0", "opacity-0", "-translate-x-full");
-    modal.classList.add("scale-100", "opacity-100", "translate-x-0");
-    hamburgerIcon.classList.add("hidden");
-    closeIcon.classList.remove("hidden");
-  });
-
-  closeIcon.addEventListener("click", () => {
-    modal.classList.remove("scale-100", "opacity-100", "translate-x-0");
-    modal.classList.add("scale-0", "opacity-0", "-translate-x-full");
-    hamburgerIcon.classList.remove("hidden");
-    closeIcon.classList.add("hidden");
-  });
-}
-
-// Inisialisasi loading screen
-document.addEventListener("DOMContentLoaded", function () {
-  const loadingBar = document.getElementById("loading-bar");
-  const loadingScreen = document.getElementById("loading-screen");
-  const contentScreen = document.getElementById("portofolio-page");
-
-  // Animate loading bar
-  let width = 0;
-  const interval = setInterval(function () {
-    if (width >= 100) {
-      clearInterval(interval);
-
-      // Add fade out effect
-      loadingScreen.classList.add(
-        "opacity-0",
-        "transition-opacity",
-        "duration-700",
-      );
-
-      // Hide loading screen after fade out
-      setTimeout(function () {
-        loadingScreen.classList.add("hidden");
-        // Show content screen
-        contentScreen.classList.remove("hidden");
-        // Add fade-in effect for content
-        contentScreen.classList.add(
-          "opacity-100",
-          "transition-opacity",
-          "duration-700",
-        );
-      }, 700);
-    } else {
-      width += Math.random() * 10;
-      if (width > 100) width = 100;
-      loadingBar.style.width = width + "%";
-    }
-  }, 200);
-
-  // Force complete loading after 5 seconds
-  setTimeout(function () {
-    width = 100;
-    loadingBar.style.width = "100%";
-  }, 5000);
 
   // Portfolio Filter Logic
   const filterButtons = document.querySelectorAll(".filter-btn");
@@ -191,3 +121,28 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize with "All" filter active
   filterItems("all");
 });
+
+function initModal() {
+  const modal = document.getElementById("menuModal");
+  const hamburgerIcon = document.getElementById("hamburgerIcon");
+  const closeIcon = document.getElementById("closeIcon");
+
+  if (!modal || !hamburgerIcon || !closeIcon) {
+    console.error("Salah satu elemen dalam toggleModal tidak ditemukan.");
+    return;
+  }
+
+  hamburgerIcon.addEventListener("click", () => {
+    modal.classList.remove("scale-0", "opacity-0", "-translate-x-full");
+    modal.classList.add("scale-100", "opacity-100", "translate-x-0");
+    hamburgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
+  });
+
+  closeIcon.addEventListener("click", () => {
+    modal.classList.remove("scale-100", "opacity-100", "translate-x-0");
+    modal.classList.add("scale-0", "opacity-0", "-translate-x-full");
+    hamburgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  });
+}

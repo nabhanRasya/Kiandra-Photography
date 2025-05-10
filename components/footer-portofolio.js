@@ -2,7 +2,7 @@ class footer extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <footer class="bg-neutral-200 py-20 shadow-md">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-[1060px] mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex flex-col md:flex-row justify-between items-center">
             <!-- Logo and Brand -->
             <div class="mb-8 md:mb-0 w-full flex flex-col items-center md:items-start">
