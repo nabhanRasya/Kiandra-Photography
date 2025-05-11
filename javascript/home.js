@@ -1,25 +1,24 @@
 document.addEventListener("DOMContentLoaded", function () {
-  initCarousel();
-  initModal();
+  initModal(); // Initialize modal for menu
 
   // Add click event listeners to service cards
   const serviceCards = document.querySelectorAll('.service .grid > div:not(:last-child)');
   serviceCards.forEach(card => {
     card.addEventListener('click', function() {
-      window.location.href = 'clientDummy.html';
+      window.location.href = 'contact.html';
     });
-    // Add cursor pointer style
     card.style.cursor = 'pointer';
   });
 });
 
+// Function to initialize modal
 function initModal() {
   const modal = document.getElementById("menuModal");
   const hamburgerIcon = document.getElementById("hamburgerIcon");
   const closeIcon = document.getElementById("closeIcon");
 
   if (!modal || !hamburgerIcon || !closeIcon) {
-    console.error("Salah satu elemen dalam toggleModal tidak ditemukan.");
+    console.error("Required modal elements not found");
     return;
   }
 
@@ -38,26 +37,7 @@ function initModal() {
   });
 }
 
-function initCarousel() {
-  const carousel = document.getElementById("carousel");
-  if (!carousel) {
-    console.error("Elemen carousel tidak ditemukan.");
-    return;
-  }
-
-  let index = 0;
-  const slides = carousel.children;
-  const totalSlides = slides.length;
-
-  function moveCarousel() {
-    index = (index + 1) % totalSlides;
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-  }
-
-  setInterval(moveCarousel, 3000); // Ganti gambar setiap 3 detik
-}
-
-// Inisialisasi Swiper
+// Initialize Swiper
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   spaceBetween: 30,

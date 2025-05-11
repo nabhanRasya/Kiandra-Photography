@@ -24,7 +24,7 @@ class bookingModal extends HTMLElement {
           </div>
 
           <!-- Booking Form -->
-          <form id="bookingForm" class="mt-6 space-y-6 neue">
+          <form name="submit-to-google-sheet" id="bookingForm" class="mt-6 space-y-6 neue">
             <!-- Personal Info Section -->
             <div class="space-y-4">
               <h3
