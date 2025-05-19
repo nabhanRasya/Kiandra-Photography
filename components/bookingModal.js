@@ -9,7 +9,7 @@ class bookingModal extends HTMLElement {
           <!-- Modal Header -->
           <div
             class="flex justify-between items-center border-b border-neutral-200 pb-4">
-            <h2 class="text-2xl ethic-regular text-neutral-700">Book Your
+            <h2 class="text-2xl ivyora-regular text-neutral-700">Book Your
               Photography Session</h2>
             <button id="closeModal"
               class="text-neutral-500 hover:text-neutral-700 transition duration-300 bg-neutral-50 p-2 rounded-full">
@@ -58,10 +58,10 @@ class bookingModal extends HTMLElement {
                 <div>
                   <label for="date"
                     class="block text-sm text-neutral-600 mb-2">Event
-                    Date</label>
+                 z   Date</label>
                   <input type="date" id="date" name="date"
                     required
-                    class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-200 transition">
+                    class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-200 transition cursor-pointer">
                 </div>
               </div>
             </div>
@@ -152,19 +152,6 @@ class bookingModal extends HTMLElement {
                     </label>
                   </div>
                 </div>
-              </div>
-
-              <div>
-                <label for="package"
-                  class="block text-sm text-neutral-600 mb-2">Package</label>
-                <select id="package" name="package" required
-                  class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-200 transition">
-                  <option value>Select a package</option>
-                  <option value="Basic">Basic</option>
-                  <option value="Standard">Standard</option>
-                  <option value="Premium">Premium</option>
-                  <option value="Luxury">Luxury</option>
-                </select>
               </div>
 
               <div>

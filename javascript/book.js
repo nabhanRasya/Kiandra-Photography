@@ -42,7 +42,7 @@ function closeModal() {
 // Function to show notification
 function showNotification(message, type = 'success') {
   const notification = document.createElement('div');
-  notification.className = `fixed top-4 right-4 p-4 rounded-lg shadow-lg z-50 transform transition-all duration-300 translate-x-full`;
+  notification.className = `fixed top-4 right-4 w-[95%] md:w-1/2 p-4 rounded-lg shadow-lg z-50 transform transition-all duration-300 translate-x-full ivyora-regular`;
   
   if (type === 'success') {
     notification.classList.add('bg-green-50', 'border', 'border-green-200', 'text-green-800');
@@ -52,7 +52,7 @@ function showNotification(message, type = 'success') {
 
   notification.innerHTML = `
     <div class="flex items-center">
-      <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <svg class="h-9 w-9 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
       </svg>
       <p class="font-medium">${sanitizeInput(message)}</p>
@@ -72,7 +72,7 @@ function showNotification(message, type = 'success') {
     setTimeout(() => {
       notification.remove();
     }, 300);
-  }, 3000);
+  }, 5000);
 }
 
 // Function to set loading state
@@ -86,7 +86,7 @@ function setLoading(isLoading) {
   if (isLoading) {
     submitButton.disabled = true;
     submitButton.innerHTML = `
-      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hover:text-black inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
       </svg>
@@ -184,11 +184,11 @@ if (form) {
         throw new Error('Network response was not ok');
       }
 
-      showNotification("Your booking request has been submitted successfully! We'll contact you shortly.");
+      showNotification("Booking request submitted! Our admin will verify and contact you soon. For faster response, reach us via chat.");
   setTimeout(() => {
     form.reset();
     closeModal();
-      }, 1000);
+      }, 3000);
 
     } catch (error) {
       const errorMessage = error.message === 'Request timeout' 
