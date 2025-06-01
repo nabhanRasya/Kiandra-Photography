@@ -260,23 +260,23 @@ class ViewBookingModal extends HTMLElement {
 
   showModal(booking) {
     const modal = this.shadowRoot.getElementById('viewBookingModal');
-    
+
     // Update modal content
     this.shadowRoot.getElementById('viewName').textContent = booking.name;
     this.shadowRoot.getElementById('viewDate').textContent = this.formatDate(booking.date);
     this.shadowRoot.getElementById('viewService').textContent = booking.service;
     this.shadowRoot.getElementById('viewLocation').textContent = booking.location;
-    
+
     // Set up email link
     const emailElement = this.shadowRoot.getElementById('viewEmail');
     emailElement.href = `mailto:${booking.email}`;
     emailElement.querySelector('span').textContent = booking.email;
-    
+
     // Set up phone link
     const phoneElement = this.shadowRoot.getElementById('viewPhone');
     phoneElement.href = `tel:${booking.phone}`;
     phoneElement.querySelector('span').textContent = booking.phone;
-    
+
     // Handle notes with proper formatting
     const notesElement = this.shadowRoot.getElementById('viewNotes');
     notesElement.textContent = booking.notes || 'No notes available';
@@ -296,11 +296,11 @@ class ViewBookingModal extends HTMLElement {
   hideModal() {
     const modal = this.shadowRoot.getElementById('viewBookingModal');
     modal.classList.remove('show');
-    
+
     // Remove body styles
     document.body.style.overflow = '';
     document.body.style.paddingRight = '';
-    
+
     // Wait for animation to complete before hiding
     setTimeout(() => {
       if (!modal.classList.contains('show')) {

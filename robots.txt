@@ -3,7 +3,7 @@ Allow: /
 Sitemap: https://kiandraphotography.com/sitemap.xml
 
 # Disallow testing and temporary files
-Disallow: /testing.html
+Disallow: /dashboard.html
 Disallow: /temp/
 Disallow: /draft/
 
