@@ -1,11 +1,11 @@
 class navbar extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+    connectedCallback() {
+        this.innerHTML = `
         <nav
-    class="flex justify-between items-center py-5 px-4 md:px-[100px] fixed top-0 left-0 w-full z-50 bg-neutral-900/60 backdrop-blur-sm text-white">
+    class="flex justify-between items-center py-5 px-4 lg:px-[120px] fixed top-0 left-0 w-full z-50 bg-neutral-900/60 backdrop-blur-sm text-white">
     <img class="w-8" src="../assets/logo/main-logo.png" alt="Main Logo" />
     <a href="#" id="openModalBtn"
-        class="text-md after:content-['_↗']">Book a
+        class="text-sm lg:text-lg after:content-['_↗']">Book a
         meeting</a>
     <button
         id="menuButton"
@@ -39,6 +39,6 @@ class navbar extends HTMLElement {
     </button>
 </nav>
       `;
-  }
+    }
 }
 customElements.define("my-navbar", navbar);

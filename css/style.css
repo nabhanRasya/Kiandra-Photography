@@ -1,3 +1,41 @@
+.carousel-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .carousel-image {
+            width: 208px; /* w-52 = 208px (52×4) */
+            height: 400px;
+            object-fit: cover;
+            border-radius: 120px;
+        }
+        
+        @media (min-width: 768px) {
+            .carousel-image {
+                width: 240px; /* md:w-60 = 240px (60×4) */
+                height: 420px; /* md:h-[420px] */
+            }
+        }
+
 /* Animasi Slide Up */
 .slide-up {
   transform: translateY(-50px);
@@ -139,3 +177,36 @@
     max-width: 90%;
   }
 }
+
+.carousel-container {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .nav-button {
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .nav-button:hover {
+            transform: scale(1.1);
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .indicator {
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background-color: white;
+            transform: scale(1.2);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
