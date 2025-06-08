@@ -46,6 +46,8 @@ const swiper = new Swiper(".mySwiper", {
     delay: 4000,
     disableOnInteraction: false,
   },
+  lazy: true,
+  preloadImages: true,
   breakpoints: {
     768: {
       slidesPerView: 2,
@@ -56,85 +58,110 @@ const swiper = new Swiper(".mySwiper", {
   },
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('carousel');
-            const slides = document.querySelectorAll('.carousel-slide');
-            const totalSlides = slides.length;
-            let currentIndex = 0;
-            
-            function updateCarousel() {
-                // Hitung posisi translateX berdasarkan currentIndex
-                const translateX = -currentIndex * 100;
-                carousel.style.transform = `translateX(${translateX}%)`;
-            }
-            
-            function nextSlide() {
-                currentIndex = (currentIndex + 1) % totalSlides;
-                updateCarousel();
-            }
-            
-            // Auto slide setiap 3 detik
-            const interval = setInterval(nextSlide, 3000);
-            
-            // Pause on hover (opsional)
-            carousel.addEventListener('mouseenter', () => clearInterval(interval));
-            carousel.addEventListener('mouseleave', () => {
-                interval = setInterval(nextSlide, 3000);
-            });
-            
-            // Inisialisasi
-            updateCarousel();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector(".carousel-container");
+    const carousel = document.getElementById("carousel");
+    const slides = document.querySelectorAll(".carousel-slide");
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+    let interval;
+
+    // Pastikan container muncul setelah semua gambar siap
+    const images = container.querySelectorAll("img");
+    let loadedCount = 0;
+
+    function checkAllImagesLoaded() {
+      if (loadedCount === images.length) {
+        container.style.opacity = "1";
+        startAutoSlide();
+      }
+    }
+
+    images.forEach((img) => {
+      if (img.complete) {
+        loadedCount++;
+        checkAllImagesLoaded();
+      } else {
+        img.addEventListener("load", () => {
+          loadedCount++;
+          checkAllImagesLoaded();
         });
+      }
+    });
 
-        document.addEventListener("DOMContentLoaded", function () {
-        const CHANNEL_ID = "UCySWyRPHzYQ8EKHU0U4E3_g";
-        const API_KEY = "AIzaSyC0o-dNMlHnf8YW6PgHmpqjdF1U4T4GPfo";
-        const videoContainer = document.getElementById("videoContainer");
-        const showMoreBtn = document.getElementById("showMoreBtn");
-        const loadingSpinner = document.getElementById("loadingSpinner");
+    function updateCarousel() {
+      const translateX = -currentIndex * 100;
+      carousel.style.transform = `translateX(${translateX}%)`;
+    }
 
-        let allVideos = [];
-        let visibleVideos = 3;
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    }
 
-        async function fetchVideos() {
-          try {
-            loadingSpinner.classList.remove("hidden");
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, 4000);
+    }
 
-            const response = await fetch(
-              `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=10&order=date&type=video&key=${API_KEY}`
-            );
+    function stopAutoSlide() {
+      clearInterval(interval);
+    }
 
-            if (!response.ok) {
-              throw new Error("Failed to fetch videos");
-            }
+    // Pause carousel saat hover
+    container.addEventListener("mouseenter", stopAutoSlide);
+    container.addEventListener("mouseleave", startAutoSlide);
+  });
 
-            const data = await response.json();
-            allVideos = data.items;
+document.addEventListener("DOMContentLoaded", function () {
+  const CHANNEL_ID = "UCySWyRPHzYQ8EKHU0U4E3_g";
+  const API_KEY = "AIzaSyC0o-dNMlHnf8YW6PgHmpqjdF1U4T4GPfo";
+  const videoContainer = document.getElementById("videoContainer");
+  const showMoreBtn = document.getElementById("showMoreBtn");
+  const loadingSpinner = document.getElementById("loadingSpinner");
 
-            if (allVideos.length > 3) {
-              showMoreBtn.classList.remove("hidden");
-            }
+  let allVideos = [];
+  let visibleVideos = 3;
 
-            displayVideos();
-          } catch (error) {
-            console.error("Error fetching videos:", error);
-            videoContainer.innerHTML = `
+  async function fetchVideos() {
+    try {
+      loadingSpinner.classList.remove("hidden");
+
+      const response = await fetch(
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=10&order=date&type=video&key=${API_KEY}`
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch videos");
+      }
+
+      const data = await response.json();
+      allVideos = data.items;
+
+      if (allVideos.length > 3) {
+        showMoreBtn.classList.remove("hidden");
+      }
+
+      displayVideos();
+    } catch (error) {
+      console.error("Error fetching videos:", error);
+      videoContainer.innerHTML = `
               <div class="col-span-full text-center text-neutral-600">
                 <p>Unable to load videos at this time. Please visit our 
                   <a href="https://www.youtube.com/channel/${CHANNEL_ID}" target="_blank" class="text-blue-600 hover:underline">YouTube channel</a>.
                 </p>
               </div>
             `;
-          } finally {
-            loadingSpinner.classList.add("hidden");
-          }
-        }
+    } finally {
+      loadingSpinner.classList.add("hidden");
+    }
+  }
 
-        function displayVideos() {
-          const videosToShow = allVideos.slice(0, visibleVideos);
-          videoContainer.innerHTML = videosToShow
-            .map(
-              (video) => `
+  function displayVideos() {
+    const videosToShow = allVideos.slice(0, visibleVideos);
+    videoContainer.innerHTML = videosToShow
+      .map(
+        (video) => `
             <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
               <div class="relative pt-[56.25%]"> <!-- 16:9 Aspect Ratio -->
                 <iframe 
@@ -148,31 +175,30 @@ document.addEventListener('DOMContentLoaded', function() {
                 ></iframe>
               </div>
               <div class="p-4">
-                <h3 class="font-semibold text-lg mb-2 line-clamp-2">${
-                  video.snippet.title
-                }</h3>
+                <h3 class="font-semibold text-lg mb-2 line-clamp-2">${video.snippet.title
+          }</h3>
                 <p class="text-neutral-500 text-sm">${new Date(
-                  video.snippet.publishedAt
-                ).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}</p>
+            video.snippet.publishedAt
+          ).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}</p>
               </div>
             </div>
           `
-            )
-            .join("");
+      )
+      .join("");
 
-          if (visibleVideos >= allVideos.length) {
-            showMoreBtn.classList.add("hidden");
-          }
-        }
+    if (visibleVideos >= allVideos.length) {
+      showMoreBtn.classList.add("hidden");
+    }
+  }
 
-        showMoreBtn.addEventListener("click", function () {
-          visibleVideos += 3;
-          displayVideos();
-        });
+  showMoreBtn.addEventListener("click", function () {
+    visibleVideos += 3;
+    displayVideos();
+  });
 
-        fetchVideos();
-      });
+  fetchVideos();
+});

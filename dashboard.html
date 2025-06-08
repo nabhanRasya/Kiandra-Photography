@@ -1,107 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard - Kiandra Photography</title>
-    <link rel="stylesheet" href="assets/font/font.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/font/font.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="ethic-light bg-neutral-100">
-
-      <my-navbar></my-navbar>
+    <my-navbar></my-navbar>
 
     <!-- Main Content -->
-    <main class="container max-w-[1060px] mx-auto px-4 mt-[7rem] relative z-20 pb-20">
-        <!-- Statistics Overview -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div class="bg-white rounded-2xl p-8 shadow-sm">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg text-neutral-600 ivyora-regular">Total Bookings</h3>
-                    <i class="fas fa-calendar text-2xl text-neutral-400"></i>
+    <main
+      class="container max-w-[1060px] mx-auto px-4 mt-[7rem] relative z-20 pb-20"
+    >
+      <!-- Statistics Overview -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg text-neutral-600 ivyora-regular">
+              Total Bookings
+            </h3>
+            <i class="fas fa-calendar text-2xl text-neutral-400"></i>
+          </div>
+          <p class="text-3xl ethic-regular" id="totalBookings">0</p>
         </div>
-                <p class="text-3xl ethic-regular" id="totalBookings">0</p>
-                  </div>
-            <div class="bg-white rounded-2xl p-8 shadow-sm">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg text-neutral-600 ivyora-regular">New Bookings</h3>
-                    <i class="fas fa-clock text-2xl text-neutral-400"></i>
-                  </div>
-                <p class="text-3xl ethic-regular" id="pendingBookings">0</p>
-                  </div>
-            <div class="bg-white rounded-2xl p-8 shadow-sm">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg text-neutral-600 ivyora-regular">Today's Bookings</h3>
-                    <i class="fas fa-calendar-day text-2xl text-neutral-400"></i>
-                  </div>
-                <p class="text-3xl ethic-regular" id="completedBookings">0</p>
-                    </div>
-                  </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg text-neutral-600 ivyora-regular">
+              New Bookings
+            </h3>
+            <i class="fas fa-clock text-2xl text-neutral-400"></i>
+          </div>
+          <p class="text-3xl ethic-regular" id="pendingBookings">0</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-lg text-neutral-600 ivyora-regular">
+              Today's Bookings
+            </h3>
+            <i class="fas fa-calendar-day text-2xl text-neutral-400"></i>
+          </div>
+          <p class="text-3xl ethic-regular" id="completedBookings">0</p>
+        </div>
+      </div>
 
-        <!-- Recent Bookings -->
-        <div class="bg-white rounded-2xl shadow-sm">
-            <div class="p-8 border-b border-neutral-100">
-                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                    <h2 class="text-2xl ethic-regular">Recent Bookings</h2>
-                    <div class="flex flex-col md:flex-row gap-4">
-                        <div class="relative">
-                            <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"></i>
-                            <input 
-                                type="text" 
-                                id="searchInput"
-                                placeholder="Search bookings..."
-                                class="pl-12 pr-4 py-3 rounded-lg border border-neutral-200 w-full md:w-64 focus:outline-none focus:border-neutral-400 transition-colors ivyora-regular"
-                            >
-                    </div>
-                        <select 
-                            id="statusFilter"
-                            class="hidden px-4 py-3 rounded-lg border border-neutral-200 focus:outline-none focus:border-neutral-400 transition-colors ivyora-regular"
-                        >
-                            <option value="all">All Bookings</option>
-                        </select>
-                    </div>
-                  </div>
-                </div>
-
-            <div class="overflow-x-auto">
-                <table class="w-full">
-                    <thead>
-                        <tr class="border-b border-neutral-100">
-                            <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">Client</th>
-                            <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">Date</th>
-                            <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">Service</th>
-                            <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">Location</th>
-                            <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bookingsTableBody">
-                        <!-- Bookings will be populated here -->
-                        <tr>
-                            <td colspan="5" class="px-8 py-5 text-center text-neutral-500">
-                                Loading bookings...
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                  </div>
-
-            <div class="p-8 border-t border-neutral-100">
-                <div class="flex justify-center gap-2" id="pagination">
-                    <!-- Pagination will be populated here -->
+      <!-- Recent Bookings -->
+      <div class="bg-white rounded-2xl shadow-sm">
+        <div class="p-8 border-b border-neutral-100">
+          <div
+            class="flex flex-col md:flex-row md:items-center justify-between gap-4"
+          >
+            <h2 class="text-2xl ethic-regular">Recent Bookings</h2>
+            <div class="flex flex-col md:flex-row gap-4">
+              <div class="relative">
+                <i
+                  class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-neutral-400"
+                ></i>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search bookings..."
+                  class="pl-12 pr-4 py-3 rounded-lg border border-neutral-200 w-full md:w-64 focus:outline-none focus:border-neutral-400 transition-colors ivyora-regular"
+                />
+              </div>
+              <select
+                id="statusFilter"
+                class="hidden px-4 py-3 rounded-lg border border-neutral-200 focus:outline-none focus:border-neutral-400 transition-colors ivyora-regular"
+              >
+                <option value="all">All Bookings</option>
+              </select>
             </div>
           </div>
         </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-neutral-100">
+                <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">
+                  Client
+                </th>
+                <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">
+                  Date
+                </th>
+                <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">
+                  Service
+                </th>
+                <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">
+                  Location
+                </th>
+                <th class="px-8 py-5 text-left text-neutral-600 ethic-regular">
+                  Actions
+                </th>
+              </tr>
+            </thead>
+            <tbody id="bookingsTableBody">
+              <!-- Bookings will be populated here -->
+              <tr>
+                <td colspan="5" class="px-8 py-5 text-center text-neutral-500">
+                  Loading bookings...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="p-8 border-t border-neutral-100">
+          <div class="flex justify-center gap-2" id="pagination">
+            <!-- Pagination will be populated here -->
+          </div>
+        </div>
+      </div>
     </main>
 
-      <my-footer></my-footer>
+    <my-footer></my-footer>
     <my-bookingmodal></my-bookingmodal>
     <my-menumodal></my-menumodal>
 
     <!-- Modal Components -->
     <view-booking-modal></view-booking-modal>
 
-  <!-- Component scripts -->
+    <!-- Component scripts -->
     <script src="components/navbar.js" type="module"></script>
     <script src="components/footer.js" type="module"></script>
     <script src="components/menuModal.js" type="module"></script>
@@ -112,6 +140,5 @@
     <script src="javascript/dashboard.js" type="module"></script>
     <script src="javascript/main.js" type="module"></script>
     <script src="javascript/book.js" type="module"></script>
-
   </body>
 </html>

@@ -23,7 +23,7 @@ class footer extends HTMLElement {
               </div>
 
               <!-- Social Icons -->
-              <div class="flex justify-center md:justify-end space-x-4">
+              <div class="flex justify-center md:justify-end gap-4">
                 <!-- YouTube -->
 <a href="https://www.youtube.com/@kiandraproduction" 
    target="_blank" 

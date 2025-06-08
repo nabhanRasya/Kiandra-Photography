@@ -24,7 +24,7 @@
     />
     <meta
       property="og:image"
-      content="https://kiandraphotography.com/assets/photography-assets/header-bg.png"
+      content="https://kiandraphotography.com/assets/images/header.jpg"
     />
     <meta property="og:url" content="https://kiandraphotography.com/contact" />
     <meta property="og:type" content="website" />
@@ -40,7 +40,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://kiandraphotography.com/assets/photography-assets/header-bg.png"
+      content="https://kiandraphotography.com/assets/images/header.jpg"
     />
     <link rel="canonical" href="https://kiandraphotography.com/contact" />
     <link
@@ -53,6 +53,10 @@
       hreflang="id"
       href="https://kiandraphotography.com/id/contact"
     />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="assets/font/font.css" />
@@ -131,7 +135,7 @@
 
       <!-- Hero Section -->
       <section
-        class="relative h-[60vh] bg-[url('assets/photography-assets/header-bg.png')] bg-cover bg-center bg-no-repeat"
+        class="relative h-[60vh] bg-[url('assets/images/engagement/firdha-yogi/firdha-yogi-engagement-1.jpg')] bg-cover bg-center bg-no-repeat"
         aria-label="Contact Hero"
       >
         <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
@@ -372,74 +376,51 @@
 
     <!-- Logic scripts -->
     <script defer src="javascript/main.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script defer src="javascript/book.js" type="module"></script>
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        loadPage();
-      });
+  document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
 
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the form element
-        const contactForm = document.getElementById("contactForm");
+    contactForm.onsubmit = function (e) {
+      e.preventDefault();
 
-        // Modify form submission
-        contactForm.onsubmit = function (e) {
-          e.preventDefault();
+      // Ambil nilai form
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const eventType = document.getElementById("eventType").value.trim();
+      const eventDate = document.getElementById("eventDate").value.trim();
+      const message = document.getElementById("message").value.trim();
 
-          // Get form values
-          const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
-          const subject = document.getElementById("subject").value.trim();
-          const message = document.getElementById("message").value.trim();
+      // Validasi wajib diisi
+      if (!name || !email || !phone || !eventType) {
+        alert("Please fill in all required fields.");
+        return;
+      }
 
-          // Validate required fields
-          if (!name || !email || !subject) {
-            alert("Please fill in all required fields");
-            return false;
-          }
+      // Format pesan WhatsApp
+      const whatsappMessage =
+        `*New Photography Inquiry - Kiandra Production*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Event Type:* ${eventType}%0A` +
+        (eventDate ? `*Preferred Date:* ${eventDate}%0A` : "") +
+        `*Message:* ${message || "No additional message"}%0A%0A` +
+        `_This message was sent via the website contact form_`;
 
-          // Create WhatsApp message
-          const whatsappMessage =
-            `*New Photography Inquiry - Kiandra Production*%0A%0A` +
-            `*Name:* ${name}%0A` +
-            `*Email:* ${email}%0A` +
-            `*Subject:* ${subject}%0A` +
-            `*Message:* ${message || "No additional message"}%0A%0A` +
-            `_This message was sent via the website contact form_`;
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+      const whatsappNumber = "6285692280704";
 
-          // Encode message for URL
-          const encodedMessage = encodeURIComponent(whatsappMessage);
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
+    };
+  });
+</script>
 
-          // WhatsApp number (already in international format)
-          const whatsappNumber = "6285692280704";
-
-          // Open WhatsApp with pre-filled message
-          window.open(
-            `https://wa.me/${whatsappNumber}?text=${encodedMessage}`,
-            "_blank"
-          );
-
-          // Optional: Reset form after submission
-          contactForm.reset();
-
-          // Optional: Show success message
-          alert(
-            "Thank you! You'll be redirected to WhatsApp to complete your inquiry."
-          );
-
-          return false;
-        };
-
-        // Auto-format phone number input if you add it later
-        if (document.getElementById("phone")) {
-          document
-            .getElementById("phone")
-            .addEventListener("input", function (e) {
-              this.value = this.value.replace(/\D/g, "");
-            });
-        }
-      });
-    </script>
   </body>
 </html>

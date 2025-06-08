@@ -26,6 +26,12 @@ class menuModal extends HTMLElement {
               href="/contact.html"
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">Contact</a>
           </li>
+          <li>
+            <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20ingin%20menanyakan%20daftar%20harga%20(pricelist)%20layanan%20di%20kiandraphotography.com." target="_blank" class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">
+  Ask Pricelist
+</a>
+
+          </li>
         </ul>
       </div>
 

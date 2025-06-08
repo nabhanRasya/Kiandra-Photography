@@ -178,7 +178,7 @@ class bookingModal extends HTMLElement {
             <div
               class="flex justify-center pt-6 border-t border-neutral-200">
               <button type="submit"
-                class="px-6 py-2 text-lg ethic-regular bg-neutral-50 border border-neutral-300 text-neutral-700 hover:bg-neutral-700 hover:text-white rounded-full transition duration-300 shadow-sm">
+                class="px-6 py-2 text-lg ethic-regular bg-neutral-50 border border-neutral-300 text-neutral-700 rounded-full transition duration-300 shadow-sm">
                 Book Now
               </button>
             </div>
