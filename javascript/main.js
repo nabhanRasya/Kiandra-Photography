@@ -1,6 +1,85 @@
 document.addEventListener("DOMContentLoaded", function () {
   initModal(); // Panggil fungsi untuk mengatur modal hanya sekali
 
+  const imageModal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModalBtn = document.getElementById("closeModalBtn");
+
+  // Fungsi untuk membuka modal
+  function openModal(imageUrl) {
+    modalImage.src = imageUrl; // Set sumber gambar di modal
+
+    // Pastikan gambar di modal tersembunyi sebelum transisi
+    modalImage.classList.add("scale-90", "opacity-0");
+
+    // Tampilkan modal overlay
+    imageModal.classList.remove("opacity-0", "invisible");
+    imageModal.classList.add("opacity-100", "visible");
+
+    // Animasi pop-up gambar di dalam modal (setelah modal terlihat)
+    // Gunakan setTimeout kecil untuk memastikan transisi CSS dipicu
+    setTimeout(() => {
+      modalImage.classList.remove("scale-90", "opacity-0");
+      modalImage.classList.add("scale-100", "opacity-100");
+    }, 50); // Sedikit delay untuk memicu transisi gambar
+  }
+
+  // Fungsi untuk menutup modal
+  function closeModal() {
+    // Mulai animasi tutup (gambar menyusut dulu)
+    modalImage.classList.remove("scale-100", "opacity-100");
+    modalImage.classList.add("scale-90", "opacity-0");
+
+    // Setelah animasi gambar selesai, sembunyikan modal overlay
+    setTimeout(() => {
+      imageModal.classList.remove("opacity-100", "visible");
+      imageModal.classList.add("opacity-0", "invisible");
+      // Opsional: bersihkan src gambar setelah modal tertutup sepenuhnya untuk memori
+      // modalImage.src = "";
+    }, 200); // Sesuaikan dengan durasi transisi gambar (misal 200ms jika durasi 300ms)
+  }
+
+  // --- Delegasi Event Listener untuk Pemicu Modal ---
+  // Kita akan menggunakan atribut data-image-src pada elemen pemicu
+  // Baik itu <img>, <div>, atau elemen lain.
+  document.body.addEventListener("click", (event) => {
+    // Mencari elemen terdekat yang memiliki kelas 'open-modal' atau 'open-modal-div'
+    // dan memiliki atribut data-image-src
+    const triggerElement = event.target.closest(
+      ".open-modal"
+    );
+
+    if (triggerElement) {
+      // Dapatkan URL gambar dari atribut data-image-src
+      // Jika pemicunya <img> (memiliki src), gunakan src-nya.
+      // Jika pemicunya div atau elemen lain, gunakan data-image-src.
+      const imageUrl =
+        triggerElement.dataset.imageSrc || triggerElement.src;
+
+      if (imageUrl) {
+        openModal(imageUrl);
+      }
+    }
+
+    // Event listener untuk tombol tutup modal atau klik di luar gambar
+    imageModal.addEventListener("click", (event) => {
+      // Tutup modal jika tombol close diklik ATAU jika klik di luar gambar
+      if (event.target === closeModalBtn || event.target === imageModal) {
+        closeModal();
+      }
+    });
+
+    // Tutup modal dengan tombol ESC
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key === "Escape" &&
+        imageModal.classList.contains("visible")
+      ) {
+        closeModal();
+      }
+    });
+  });
+
   // Portfolio Filter Logic
   const filterButtons = document.querySelectorAll(".filter-btn");
   const photoItems = document.querySelectorAll(".photo-item");

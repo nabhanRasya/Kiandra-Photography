@@ -69,9 +69,111 @@
       referrerpolicy="no-referrer"
     />
     <title>About Kiandra - Kiandra Photography</title>
+
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Kiandra Photography",
+        "description": "Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor.",
+        "url": "https://kiandraphotography.com/about",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Kiandra Photography",
+          "foundingDate": "2015",
+          "description": "Professional wedding photography studio in Bogor, Indonesia",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bogor",
+            "addressRegion": "West Java",
+            "addressCountry": "ID"
+          },
+          "employee": [
+            {
+              "@type": "Person",
+              "name": "Sarah Wijaya",
+              "jobTitle": "Lead Photographer & Founder",
+              "description": "With over 10 years of experience, Sarah brings a unique artistic vision to every project."
+            },
+            {
+              "@type": "Person",
+              "name": "Michael Tan",
+              "jobTitle": "Creative Director",
+              "description": "Michael's background in fine arts brings a distinctive style to our photography."
+            }
+          ]
+        },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://kiandraphotography.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "About",
+              "item": "https://kiandraphotography.com/about"
+            }
+          ]
+        }
+      }
+    </script>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- About Page -->
     <div id="about-page">
       <my-navbar></my-navbar>
@@ -82,11 +184,11 @@
       >
         <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64 ethic-regular"
+          class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64"
         >
           <h1 class="text-4xl md:text-6xl text-white mb-2">Our Story</h1>
           <p
-            class="text-white ivyora-regular opacity-60 text-lg md:text-xl max-w-2xl"
+            class="text-white font-regular opacity-60 text-lg md:text-xl max-w-2xl"
           >
             Capturing moments that tell your unique love story
           </p>
@@ -147,7 +249,7 @@
                     Artistic Excellence
                   </h3>
                   <p
-                    class="text-neutral-600 text-md md:text-lg ivyora-regular opacity-60"
+                    class="text-neutral-600 text-md md:text-lg font-regular opacity-60"
                   >
                     We strive for artistic excellence in every photograph,
                     ensuring each image tells a story.
@@ -179,7 +281,7 @@
                     Personal Connection
                   </h3>
                   <p
-                    class="text-neutral-600 text-md md:text-lg ivyora-regular opacity-60"
+                    class="text-neutral-600 text-md md:text-lg font-regular opacity-60"
                   >
                     Building personal connections with our clients to capture
                     their authentic moments.
@@ -211,7 +313,7 @@
                     Trust & Reliability
                   </h3>
                   <p
-                    class="text-neutral-600 text-md md:text-lg ivyora-regular opacity-60"
+                    class="text-neutral-600 text-md md:text-lg font-regular opacity-60"
                   >
                     Building trust through reliable service and consistent
                     quality in our work.
@@ -257,59 +359,6 @@
       document.addEventListener("DOMContentLoaded", function () {
         loadPage();
       });
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "AboutPage",
-        "name": "About Kiandra Photography",
-        "description": "Discover Kiandra Photography's journey - a professional wedding photography studio in Bogor.",
-        "url": "https://kiandraphotography.com/about",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Kiandra Photography",
-          "foundingDate": "2015",
-          "description": "Professional wedding photography studio in Bogor, Indonesia",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Bogor",
-            "addressRegion": "West Java",
-            "addressCountry": "ID"
-          },
-          "employee": [
-            {
-              "@type": "Person",
-              "name": "Sarah Wijaya",
-              "jobTitle": "Lead Photographer & Founder",
-              "description": "With over 10 years of experience, Sarah brings a unique artistic vision to every project."
-            },
-            {
-              "@type": "Person",
-              "name": "Michael Tan",
-              "jobTitle": "Creative Director",
-              "description": "Michael's background in fine arts brings a distinctive style to our photography."
-            }
-          ]
-        },
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://kiandraphotography.com"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "About",
-              "item": "https://kiandraphotography.com/about"
-            }
-          ]
-        }
-      }
     </script>
   </body>
 </html>

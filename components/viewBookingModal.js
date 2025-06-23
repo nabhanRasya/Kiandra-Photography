@@ -182,39 +182,39 @@ class ViewBookingModal extends HTMLElement {
       <div class="modal-backdrop" id="viewBookingModal">
         <div class="modal-container">
           <div class="modal-header">
-            <h2 class="modal-title ethic-regular">Booking Details</h2>
+            <h2 class="modal-title ">Booking Details</h2>
             <button class="close-button" id="closeModal">×</button>
           </div>
           
           <div class="modal-content">
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Client Name</div>
-              <div class="detail-value ethic-regular" id="viewName"></div>
+              <div class="detail-label font-regular">Client Name</div>
+              <div class="detail-value " id="viewName"></div>
             </div>
 
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Date</div>
-              <div class="detail-value ethic-regular" id="viewDate"></div>
+              <div class="detail-label font-regular">Date</div>
+              <div class="detail-value " id="viewDate"></div>
             </div>
 
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Service</div>
-              <div class="detail-value ethic-regular" id="viewService"></div>
+              <div class="detail-label font-regular">Service</div>
+              <div class="detail-value " id="viewService"></div>
             </div>
 
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Location</div>
-              <div class="detail-value ethic-regular" id="viewLocation"></div>
+              <div class="detail-label font-regular">Location</div>
+              <div class="detail-value " id="viewLocation"></div>
             </div>
 
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Contact Information</div>
+              <div class="detail-label font-regular">Contact Information</div>
               <div class="contact-info">
-                <a id="viewEmail" href="" class="contact-link email ethic-regular">
+                <a id="viewEmail" href="" class="contact-link email ">
                   <i class="fas fa-envelope"></i>
                   <span></span>
                 </a>
-                <a id="viewPhone" href="" class="contact-link phone ethic-regular">
+                <a id="viewPhone" href="" class="contact-link phone ">
                   <i class="fas fa-phone"></i>
                   <span></span>
                 </a>
@@ -222,8 +222,8 @@ class ViewBookingModal extends HTMLElement {
             </div>
 
             <div class="detail-group">
-              <div class="detail-label ivyora-regular">Notes</div>
-              <div class="notes-content ethic-regular" id="viewNotes"></div>
+              <div class="detail-label font-regular">Notes</div>
+              <div class="notes-content " id="viewNotes"></div>
             </div>
           </div>
         </div>

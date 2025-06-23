@@ -78,6 +78,56 @@
     <title>
       Contact Us - Kiandra Photography | Wedding Specialist in Bogor
     </title>
+
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -128,7 +178,7 @@
     </script>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- Contact Page -->
     <div id="contact-page">
       <my-navbar></my-navbar>
@@ -140,11 +190,11 @@
       >
         <div class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
         <div
-          class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64 ethic-regular"
+          class="absolute inset-0 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64"
         >
           <h1 class="text-4xl md:text-6xl text-white mb-2">Get in Touch</h1>
           <p
-            class="text-white text-lg md:text-xl ivyora-regular opacity-60 max-w-2xl"
+            class="text-white text-lg md:text-xl font-regular opacity-60 max-w-2xl"
           >
             Let's create beautiful memories together
           </p>
@@ -169,7 +219,7 @@
                   <div>
                     <label
                       for="name"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >Full Name*</label
                     >
                     <input
@@ -183,7 +233,7 @@
                   <div>
                     <label
                       for="email"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >Email*</label
                     >
                     <input
@@ -197,7 +247,7 @@
                   <div>
                     <label
                       for="phone"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >WhatsApp Number*</label
                     >
                     <input
@@ -212,13 +262,13 @@
                   <div>
                     <label
                       for="eventType"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >Event Type*</label
                     >
                     <select
                       id="eventType"
                       name="eventType"
-                      class="w-full px-4 py-2 ivyora-regular border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-500"
+                      class="w-full px-4 py-2 font-regular border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-500"
                       required
                     >
                       <option value="">Select event type</option>
@@ -232,7 +282,7 @@
                   <div>
                     <label
                       for="eventDate"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >Preferred Date</label
                     >
                     <input
@@ -245,7 +295,7 @@
                   <div>
                     <label
                       for="message"
-                      class="block text-sm ivyora-regular font-medium text-neutral-700 mb-1"
+                      class="block text-sm font-regular font-medium text-neutral-700 mb-1"
                       >Your Vision & Notes</label
                     >
                     <textarea
@@ -258,7 +308,7 @@
                   </div>
                   <button
                     type="submit"
-                    class="w-full px-6 py-3 bg-neutral-800 text-white lg:text-lg ivyora-regular opacity-60 rounded-full hover:bg-neutral-700 transition duration-300"
+                    class="w-full px-6 py-3 bg-neutral-800 text-white lg:text-lg font-regular opacity-60 rounded-full hover:bg-neutral-700 transition duration-300"
                   >
                     Send Booking Inquiry via WhatsApp
                   </button>
@@ -297,7 +347,7 @@
                       <h3 class="text-lg font-medium text-neutral-700">
                         Location
                       </h3>
-                      <p class="text-neutral-600 ivyora-regular opacity-60">
+                      <p class="text-neutral-600 font-regular opacity-60">
                         Bogor, Indonesia
                       </p>
                     </div>
@@ -324,7 +374,7 @@
                       </h3>
                       <a
                         href="mailto:mail@kiandraphotography.com"
-                        class="text-neutral-600 ivyora-regular opacity-60 hover:text-neutral-800 transition duration-300"
+                        class="text-neutral-600 font-regular opacity-60 hover:text-neutral-800 transition duration-300"
                         >mail@kiandraphotography.com</a
                       >
                     </div>
@@ -351,7 +401,7 @@
                       </h3>
                       <a
                         href="tel:+6285692280704"
-                        class="text-neutral-600 ivyora-regular opacity-60 hover:text-neutral-800 transition duration-300"
+                        class="text-neutral-600 font-regular opacity-60 hover:text-neutral-800 transition duration-300"
                         >+62 856-9228-0704</a
                       >
                     </div>
@@ -383,44 +433,50 @@
     <script defer src="javascript/book.js" type="module"></script>
 
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contactForm");
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
 
-    contactForm.onsubmit = function (e) {
-      e.preventDefault();
+        contactForm.onsubmit = function (e) {
+          e.preventDefault();
 
-      // Ambil nilai form
-      const name = document.getElementById("name").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
-      const eventType = document.getElementById("eventType").value.trim();
-      const eventDate = document.getElementById("eventDate").value.trim();
-      const message = document.getElementById("message").value.trim();
+          // Ambil nilai form
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const eventType = document.getElementById("eventType").value.trim();
+          const eventDate = document.getElementById("eventDate").value.trim();
+          const message = document.getElementById("message").value.trim();
 
-      // Validasi wajib diisi
-      if (!name || !email || !phone || !eventType) {
-        alert("Please fill in all required fields.");
-        return;
-      }
+          // Validasi wajib diisi
+          if (!name || !email || !phone || !eventType) {
+            alert("Please fill in all required fields.");
+            return;
+          }
 
-      // Format pesan WhatsApp
-      const whatsappMessage =
-        `*New Photography Inquiry - Kiandra Production*%0A%0A` +
-        `*Name:* ${name}%0A` +
-        `*Email:* ${email}%0A` +
-        `*Phone:* ${phone}%0A` +
-        `*Event Type:* ${eventType}%0A` +
-        (eventDate ? `*Preferred Date:* ${eventDate}%0A` : "") +
-        `*Message:* ${message || "No additional message"}%0A%0A` +
-        `_This message was sent via the website contact form_`;
+          // Encode setiap field
+          const lineBreak = "%0A";
+          const whatsappMessage =
+            `*New Photography Inquiry - Kiandra Production*${lineBreak}${lineBreak}` +
+            `*Name:* ${encodeURIComponent(name)}${lineBreak}` +
+            `*Email:* ${encodeURIComponent(email)}${lineBreak}` +
+            `*Phone:* ${encodeURIComponent(phone)}${lineBreak}` +
+            `*Event Type:* ${encodeURIComponent(eventType)}${lineBreak}` +
+            (eventDate
+              ? `*Preferred Date:* ${encodeURIComponent(eventDate)}${lineBreak}`
+              : "") +
+            `*Message:* ${encodeURIComponent(
+              message || "No additional message"
+            )}${lineBreak}${lineBreak}` +
+            encodeURIComponent(
+              "_This message was sent via the website contact form_"
+            );
 
-      const encodedMessage = encodeURIComponent(whatsappMessage);
-      const whatsappNumber = "6285692280704";
+          const whatsappNumber = "6285692280704";
+          const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, "_blank");
-    };
-  });
-</script>
-
+          window.open(whatsappLink, "_blank");
+        };
+      });
+    </script>
   </body>
 </html>

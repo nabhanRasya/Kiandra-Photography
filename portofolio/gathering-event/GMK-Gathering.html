@@ -57,6 +57,55 @@
       href="https://kiandraphotography.com/portofolio/gathering-event/GMK-Gathering.html"
     />
 
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
     <!-- Schema.org -->
     <script type="application/ld+json">
       {
@@ -103,7 +152,7 @@
     <title>Kiandra Photography</title>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- Portfolio Page -->
     <div id="portofolio-page">
       <!-- Navbar -->
@@ -111,7 +160,7 @@
 
       <!-- Hero Section -->
       <div
-        class="h-[60vh] bg-[url('../../assets/images/gathering-event/gmk-gathering/gmk-gathering-9.jpg')] bg-cover bg-center bg-no-repeat"
+        class="h-[60vh] open-modal bg-[url('../../assets/images/gathering-event/gmk-gathering/gmk-gathering-9.jpg')] bg-cover bg-center bg-no-repeat"
       ></div>
 
       <!-- Post -->
@@ -137,7 +186,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-1.jpg"
                       alt="GMK Gathering di alam"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -148,7 +197,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-2.jpg"
                       alt="Peserta gathering berfoto bersama"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -159,7 +208,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-3.jpg"
                       alt="Aktivitas team building di alam"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -170,7 +219,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-4.jpg"
                       alt="Pemandangan alam gathering"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -181,7 +230,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-5.jpg"
                       alt="Sesi diskusi di alam terbuka"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -192,7 +241,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-6.jpg"
                       alt="Makan bersama di alam"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -203,7 +252,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-7.jpg"
                       alt="Api unggun malam hari"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -214,7 +263,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-8.jpg"
                       alt="Peserta gathering berjalan di jalan setapak"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -225,7 +274,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-9.jpg"
                       alt="Panorama alam tempat gathering"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -236,7 +285,7 @@
                     <img
                       src="../../assets/images/gathering-event/gmk-gathering/gmk-gathering-10.jpg"
                       alt="Foto grup akhir acara"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
                 </div>
@@ -263,6 +312,8 @@
       type="module"
     ></script>
     <script defer src="../../components/menuModal.js" type="module"></script>
+    <script defer src="../../components/imagePreview.js" type="module"></script>
+    <my-previewmodal></my-previewmodal>
     <script defer src="../../components/bookingModal.js" type="module"></script>
 
     <!-- Logic scripts -->

@@ -57,6 +57,55 @@
       href="https://kiandraphotography.com/portofolio/wedding/chantya-aldy-traditional-wedding.html"
     />
 
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
     <!-- Schema.org -->
     <script type="application/ld+json">
       {
@@ -105,7 +154,7 @@
     <title>Kiandra Photography</title>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- Portfolio Page -->
     <div id="portofolio-page">
       <!-- Navbar -->
@@ -113,7 +162,7 @@
 
       <!-- Hero Section -->
       <div
-        class="h-[60vh] bg-[url('../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg')] bg-cover bg-bottom bg-no-repeat"
+        class="h-[60vh] open-modal bg-[url('../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg')] bg-cover bg-bottom bg-no-repeat"
       ></div>
 
       <!-- Post -->
@@ -139,7 +188,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-1.jpg"
                       alt="Prosesi siraman mempelai"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -150,7 +199,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-2.jpg"
                       alt="Mempelai menggunakan pakaian adat Jawa"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -161,7 +210,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-3.jpg"
                       alt="Prosesi midodareni"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -172,7 +221,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-4.jpg"
                       alt="Detail seserahan pengantin"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -183,7 +232,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-5.jpg"
                       alt="Prosesi sungkeman"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -194,7 +243,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-6.jpg"
                       alt="Tarian tradisional penyambutan"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -205,7 +254,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-7.jpg"
                       alt="Kain sindur dalam prosesi"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -216,7 +265,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-8.jpg"
                       alt="Detail rias dan busana pengantin"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -227,7 +276,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg"
                       alt="Foto mempelai dengan latar pagelaran adat"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -238,7 +287,7 @@
                     <img
                       src="../../assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-10.jpg"
                       alt="Foto bersama keluarga besar dengan pakaian adat"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
                 </div>
@@ -265,6 +314,8 @@
       type="module"
     ></script>
     <script defer src="../../components/menuModal.js" type="module"></script>
+    <script defer src="../../components/imagePreview.js" type="module"></script>
+    <my-previewmodal></my-previewmodal>
     <script defer src="../../components/bookingModal.js" type="module"></script>
 
     <!-- Logic scripts -->

@@ -110,14 +110,14 @@ function displayBookings() {
   const currentBookings = filteredBookings.slice(startIndex, endIndex);
 
   bookingsTableBody.innerHTML = currentBookings.map(booking => `
-    <tr class="hover:bg-neutral-50 transition-colors duration-200 ivyora-regular">
+    <tr class="hover:bg-neutral-50 transition-colors duration-200 font-regular">
       <td class="px-8 py-5">
-        <div class="ethic-regular">${booking.name}</div>
+        <div class="">${booking.name}</div>
         <div class="text-sm text-neutral-500">${booking.email}</div>
       </td>
-      <td class="px-8 py-5 ethic-regular">${formatDate(booking.date)}</td>
-      <td class="px-8 py-5 ethic-regular">${booking.service}</td>
-      <td class="px-8 py-5 ethic-regular">${booking.location}</td>
+      <td class="px-8 py-5 ">${formatDate(booking.date)}</td>
+      <td class="px-8 py-5 ">${booking.service}</td>
+      <td class="px-8 py-5 ">${booking.location}</td>
       <td class="px-8 py-5">
         <button 
           data-action="view"

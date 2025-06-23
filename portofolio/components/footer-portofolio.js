@@ -17,7 +17,7 @@ class footer extends HTMLElement {
               <h3 class="text-xl font-light text-neutral-800 mb-4">
                 Get in Touch
               </h3>
-              <div class="mb-4 text-md ivyora-regular opacity-60">
+              <div class="mb-4 text-md font-regular opacity-60">
                 <p class="text-neutral-600 mb-1">mail@kiandraphotography.com</p>
                 <p class="text-neutral-600">+62 856-9228-0704</p>
               </div>
@@ -53,7 +53,7 @@ class footer extends HTMLElement {
 
           <!-- Copyright -->
           <div class="mt-12 pt-8 border-t border-neutral-200 text-center">
-            <p class="text-md ivyora-regular opacity-60 text-neutral-500">
+            <p class="text-md font-regular opacity-60 text-neutral-500">
               &copy; 2025 Kiandra Photography. All rights reserved.
             </p>
           </div>

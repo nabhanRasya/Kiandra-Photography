@@ -57,6 +57,55 @@
       href="https://kiandraphotography.com/portofolio/wedding/ola-cindy-international-wedding.html"
     />
 
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
     <!-- Schema.org -->
     <script type="application/ld+json">
       {
@@ -103,7 +152,7 @@
     <title>Kiandra Photography</title>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- Portfolio Page -->
     <div id="portofolio-page">
       <!-- Navbar -->
@@ -111,7 +160,7 @@
 
       <!-- Hero Section -->
       <div
-        class="h-[60vh] bg-[url('../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-9.jpg')] bg-cover bg-center bg-no-repeat"
+        class="h-[60vh] open-modal bg-[url('../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-9.jpg')] bg-cover bg-center bg-no-repeat"
       ></div>
 
       <!-- Post -->
@@ -137,7 +186,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-1.jpg"
                       alt="Mempelai berjalan di aisle"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -148,7 +197,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-2.jpg"
                       alt="Pertukaran cincin pernikahan"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -159,7 +208,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-3.jpg"
                       alt="Foto close-up mempelai"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -170,7 +219,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-4.jpg"
                       alt="Dekorasi meja pengantin"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -181,7 +230,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-5.jpg"
                       alt="First dance mempelai"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -192,7 +241,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-6.jpg"
                       alt="Foto keluarga besar"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -203,7 +252,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-7.jpg"
                       alt="Potong kue pengantin"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -214,7 +263,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-8.jpg"
                       alt="Detail dekorasi bunga"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -225,7 +274,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-9.jpg"
                       alt="Pemandangan sunset di pantai"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
 
@@ -236,7 +285,7 @@
                     <img
                       src="../../assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-10.jpg"
                       alt="Foto akhir dengan tamu undangan"
-                      class="w-full h-full object-cover"
+                      class="w-full h-full object-cover open-modal cursor-pointer"
                     />
                   </div>
                 </div>
@@ -263,6 +312,8 @@
       type="module"
     ></script>
     <script defer src="../../components/menuModal.js" type="module"></script>
+    <script defer src="../../components/imagePreview.js" type="module"></script>
+    <my-previewmodal></my-previewmodal>
     <script defer src="../../components/bookingModal.js" type="module"></script>
 
     <!-- Logic scripts -->

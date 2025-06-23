@@ -9,7 +9,7 @@ class bookingModal extends HTMLElement {
           <!-- Modal Header -->
           <div
             class="flex justify-between items-center border-b border-neutral-200 pb-4">
-            <h2 class="text-2xl ivyora-regular text-neutral-700">Book Your
+            <h2 class="text-2xl font-regular text-neutral-700">Book Your
               Photography Session</h2>
             <button id="closeModal"
               class="text-neutral-500 hover:text-neutral-700 transition duration-300 bg-neutral-50 p-2 rounded-full">
@@ -57,8 +57,7 @@ class bookingModal extends HTMLElement {
                 </div>
                 <div>
                   <label for="date"
-                    class="block text-sm text-neutral-600 mb-2">Event
-                 z   Date</label>
+                    class="block text-sm text-neutral-600 mb-2">Event Date</label>
                   <input type="date" id="date" name="date"
                     required
                     class="w-full px-4 py-2 border border-neutral-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-200 transition cursor-pointer">
@@ -178,7 +177,7 @@ class bookingModal extends HTMLElement {
             <div
               class="flex justify-center pt-6 border-t border-neutral-200">
               <button type="submit"
-                class="px-6 py-2 text-lg ethic-regular bg-neutral-50 border border-neutral-300 text-neutral-700 rounded-full transition duration-300 shadow-sm">
+                class="px-6 py-2 text-lg  bg-neutral-50 border border-neutral-300 text-neutral-700 rounded-full transition duration-300 shadow-sm">
                 Book Now
               </button>
             </div>

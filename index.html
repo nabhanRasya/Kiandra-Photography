@@ -40,7 +40,7 @@
     />
     <meta
       property="og:image"
-      content="https://kiandraphotography.com/assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-9.jpg"
+      content="https://kiandraphotography.com/assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg"
     />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -63,7 +63,7 @@
     />
     <meta
       name="twitter:image"
-      content="https://kiandraphotography.com/assets/images/meta-image.jpg"
+      content="https://kiandraphotography.com/assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg"
     />
 
     <!-- Canonical & Alternates -->
@@ -79,8 +79,57 @@
       href="https://kiandraphotography.com/en"
     />
 
-    <!-- Mobile & PWA -->
-    <!-- <meta name="theme-color" content="#E5B8B1" /> -->
+    <!-- Apple Touch Icon (gunakan versi light sebagai default) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+
+    <!-- Favicon untuk Light Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/light-favicon-32x32.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/light-favicon-16x16.png"
+      media="(prefers-color-scheme: light)"
+    />
+
+    <!-- Favicon untuk Dark Mode -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/dark-favicon-32x32.png"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/dark-favicon-16x16.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- Fallback favicon (untuk browser lama tanpa media query) -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/favicon/light-favicon-32x32.png"
+    />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <!-- Mobile & PWA
+    <meta name="theme-color" content="#E5B8B1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta
       name="apple-mobile-web-app-status-bar-style"
@@ -89,7 +138,7 @@
     <meta name="apple-mobile-web-app-title" content="Kiandra Photography" />
     <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png" />
     <meta name="application-name" content="Kiandra Photography" />
-    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" /> -->
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -98,8 +147,8 @@
         "@type": "ProfessionalService",
         "name": "Kiandra Photography",
         "image": [
-          "https://kiandraphotography.com/assets/images/portfolio-1.jpg",
-          "https://kiandraphotography.com/assets/images/portfolio-2.jpg"
+          "https://kiandraphotography.com/assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg",
+          "https://kiandraphotography.com/assets/images/international-wedding/ola-cindy/ola-cindy-international-wedding-6.jpg"
         ],
         "description": "Jasa fotografi pernikahan profesional di Bogor spesialis prewedding, wedding dan engagement photography",
         "address": {
@@ -194,7 +243,7 @@
     <title>Kiandra Photography - Wedding Specialist in Bogor</title>
   </head>
 
-  <body class="ethic-light bg-neutral-100">
+  <body class="bg-neutral-100">
     <!-- Home Page -->
     <div id="home-page">
       <my-navbar></my-navbar>
@@ -208,12 +257,10 @@
           class="absolute inset-0 z-20 flex flex-col justify-center items-center text-center px-5 md:px-32 lg:px-64 ethic-regular"
         >
           <div class="text-white text-center">
-            <p class="ivyora-light text-lg md:text-lg mb-2">
-              Wedding Specialist
-            </p>
-            <h1 class="text-6xl">Kiandra Photography</h1>
+            <p class="text-lg md:text-lg mb-2">Wedding Specialist</p>
+            <h1 class="text-6xl font-medium">Kiandra Photography</h1>
             <div class="w-1/6 h-[2px] bg-white my-4 mx-auto"></div>
-            <p class="ivyora-light text-md md:text-lg mt-2">
+            <p class="text-md md:text-lg mt-2">
               Bogor Based – Available to Travel
             </p>
           </div>
@@ -247,7 +294,7 @@
           </div>
         </div>
 
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+        <div class="absolute bottom-10 left-1/2 ms-5 -translate-x-1/2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-10 w-10 text-white animate-bounce"
@@ -269,19 +316,10 @@
       <section class="about">
         <div class="container mx-auto px-7 pt-24 pb-32 text-center">
           <p
-            class="text-3xl md:text-6xl text-neutral-700 md:leading-[4rem] tracking-tight"
+            class="text-3xl font-regular md:text-6xl text-neutral-700 md:leading-[4rem] tracking-tight"
           >
-            We are a
-            <span class="ethic-italic inline-flex items-center gap-2">
-              <img
-                src="assets/logo/enter-logo.png"
-                class="w-6 h-6 md:w-10 md:h-10 inline-block object-cover"
-                alt="Flower Icon"
-              />
-              creative studio
-            </span>
-            focused on
-            <span class="inline-flex items-center gap-2">
+            <span class="font-semibold">Creative studio</span> focused on
+            <span class="font-semibold inline-flex items-center gap-2">
               <img
                 src="assets/images/traditional-wedding/aulia-ikbal/aulia-ikbal-traditional-wedding-9.jpg"
                 class="w-20 h-6 rounded-full md:w-28 md:h-10 inline-block object-cover"
@@ -289,7 +327,7 @@
               />
               Wedding,
             </span>
-            <span class="inline-flex items-center gap-2">
+            <span class="font-semibold inline-flex items-center gap-2">
               <img
                 src="assets/images/traditional-wedding/aulia-ikbal/aulia-ikbal-traditional-wedding-1.jpg"
                 class="w-20 h-6 rounded-full md:w-28 md:h-10 inline-block object-cover"
@@ -298,7 +336,7 @@
               Prewedding,
             </span>
             and
-            <span class="inline-flex items-center gap-2">
+            <span class="font-semibold inline-flex items-center gap-2">
               Engagement
               <img
                 src="assets/images/engagement/firdha-yogi/firdha-yogi-engagement-10.jpg"
@@ -307,7 +345,7 @@
               />
             </span>
             photography with artistic
-            <span class="inline-flex items-center gap-2">
+            <span class="font-semibold inline-flex items-center gap-2">
               styling
               <img
                 src="assets/images/traditional-wedding/chantya-aldy/chantya-aldy-traditional-wedding-9.jpg"
@@ -347,14 +385,14 @@
         >
           <div class="relative z-20 text-center max-w-2xl mx-auto px-10">
             <h2
-              class="text-4xl md:text-5xl lg:text-6xl text-neutral-700 font-light"
+              class="text-4xl md:text-5xl lg:text-6xl text-neutral-700 font-regular"
             >
               Capturing Your
-              <span class="italic font-normal">Perfect Moments</span>
+              <span class="italic font-semibold">Perfect Moments</span>
             </h2>
             <div class="w-24 h-[2px] bg-neutral-400 my-4 mx-auto"></div>
             <p
-              class="text-neutral-600 text-md lg:text-lg ivyora-regular opacity-60 max-w-xl mx-auto mt-4 px-8"
+              class="text-neutral-600 text-md lg:text-lg font-regular opacity-60 max-w-xl mx-auto mt-4 px-8"
             >
               Every love story deserves to be told beautifully.
             </p>
@@ -400,7 +438,7 @@
                     International Wedding
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     Ola & Cindy
                   </p>
@@ -445,7 +483,7 @@
                     Traditional Wedding
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     Chantya & Aldy
                   </p>
@@ -490,7 +528,7 @@
                     Prewedding
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     Firdha & Yogi
                   </p>
@@ -535,7 +573,7 @@
                     Engagement
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     Firdha & Yogi
                   </p>
@@ -580,7 +618,7 @@
                     Event
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     Chocotrenz
                   </p>
@@ -625,7 +663,7 @@
                     Geathering
                   </h3>
                   <p
-                    class="text-white text-md ivyora-regular opacity-60 drop-shadow-md"
+                    class="text-white text-md font-regular opacity-60 drop-shadow-md"
                   >
                     GMK Gathering
                   </p>
@@ -667,12 +705,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Hasil fotonya memukau! Penuh warna dan sangat artistik. Aku
                     pasti balik lagi untuk sesi berikutnya."
                   </p>
                   <div class="font-medium text-sm">Nadya S.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Bogor</div>
+                  <div class="text-xs font-regular opacity-60">Bogor</div>
                 </div>
               </div>
 
@@ -687,12 +725,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Sangat profesional! Dari awal komunikasi sampai hasil akhir
                     sangat memuaskan. Highly recommended!"
                   </p>
                   <div class="font-medium text-sm">Rico A.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Jakarta</div>
+                  <div class="text-xs font-regular opacity-60">Jakarta</div>
                 </div>
               </div>
 
@@ -707,12 +745,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Foto prewed kami sangat magical. Tim Kiandra Photography
                     luar biasa ramah dan sabar."
                   </p>
                   <div class="font-medium text-sm">Clara W.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Bandung</div>
+                  <div class="text-xs font-regular opacity-60">Bandung</div>
                 </div>
               </div>
 
@@ -727,12 +765,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Editing-nya clean dan natural. Gaya fotonya sesuai banget
                     sama selera kami. Top!"
                   </p>
                   <div class="font-medium text-sm">Daniel T.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Depok</div>
+                  <div class="text-xs font-regular opacity-60">Depok</div>
                 </div>
               </div>
 
@@ -747,12 +785,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Proses pemotretan menyenangkan, fotografernya sabar banget
                     ngarahin kami yang gak biasa difoto."
                   </p>
                   <div class="font-medium text-sm">Siti R.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Bekasi</div>
+                  <div class="text-xs font-regular opacity-60">Bekasi</div>
                 </div>
               </div>
 
@@ -767,12 +805,12 @@
                     class="w-12 h-12 rounded-full object-cover mb-3 border border-white/20"
                     loading="lazy"
                   />
-                  <p class="ivyora-regular text-md mb-3 line-clamp-4">
+                  <p class="font-regular text-md mb-3 line-clamp-4">
                     "Hasil foto wedding kami sangat natural tapi tetap
                     aesthetic. Teman-teman semua memuji!"
                   </p>
                   <div class="font-medium text-sm">Budi K.</div>
-                  <div class="text-xs ivyora-regular opacity-60">Tangerang</div>
+                  <div class="text-xs font-regular opacity-60">Tangerang</div>
                 </div>
               </div>
             </div>
@@ -836,11 +874,5 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script defer src="javascript/book.js" type="module"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        loadPage();
-      });
-    </script>
   </body>
 </html>
