@@ -53,7 +53,7 @@ class footer extends HTMLElement {
 
           <!-- Copyright -->
           <div class="mt-12 pt-8 border-t border-neutral-200 text-center">
-            <p class="text-md font-regular opacity-60 text-neutral-500">
+            <p class="text-md opacity-60 text-neutral-500">
               &copy; 2025 Kiandra Photography. All rights reserved.
             </p>
           </div>

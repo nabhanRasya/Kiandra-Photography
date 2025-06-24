@@ -60,61 +60,61 @@ const swiper = new Swiper(".mySwiper", {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector(".carousel-container");
-    const carousel = document.getElementById("carousel");
-    const slides = document.querySelectorAll(".carousel-slide");
-    const totalSlides = slides.length;
-    let currentIndex = 0;
-    let interval;
+  const container = document.querySelector(".carousel-container");
+  const carousel = document.getElementById("carousel");
+  const slides = document.querySelectorAll(".carousel-slide");
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+  let interval;
 
-    // Pastikan container muncul setelah semua gambar siap
-    const images = container.querySelectorAll("img");
-    let loadedCount = 0;
+  // Pastikan container muncul setelah semua gambar siap
+  const images = container.querySelectorAll("img");
+  let loadedCount = 0;
 
-    function checkAllImagesLoaded() {
-      if (loadedCount === images.length) {
-        container.style.opacity = "1";
-        startAutoSlide();
-      }
+  function checkAllImagesLoaded() {
+    if (loadedCount === images.length) {
+      container.style.opacity = "1";
+      startAutoSlide();
     }
+  }
 
-    images.forEach((img) => {
-      if (img.complete) {
+  images.forEach((img) => {
+    if (img.complete) {
+      loadedCount++;
+      checkAllImagesLoaded();
+    } else {
+      img.addEventListener("load", () => {
         loadedCount++;
         checkAllImagesLoaded();
-      } else {
-        img.addEventListener("load", () => {
-          loadedCount++;
-          checkAllImagesLoaded();
-        });
-      }
-    });
-
-    function updateCarousel() {
-      const translateX = -currentIndex * 100;
-      carousel.style.transform = `translateX(${translateX}%)`;
+      });
     }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-    }
-
-    function startAutoSlide() {
-      interval = setInterval(nextSlide, 4000);
-    }
-
-    function stopAutoSlide() {
-      clearInterval(interval);
-    }
-
-    // Pause carousel saat hover
-    container.addEventListener("mouseenter", stopAutoSlide);
-    container.addEventListener("mouseleave", startAutoSlide);
   });
 
+  function updateCarousel() {
+    const translateX = -currentIndex * 100;
+    carousel.style.transform = `translateX(${translateX}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  function startAutoSlide() {
+    interval = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoSlide() {
+    clearInterval(interval);
+  }
+
+  // Pause carousel saat hover
+  container.addEventListener("mouseenter", stopAutoSlide);
+  container.addEventListener("mouseleave", startAutoSlide);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
-  const CHANNEL_ID = "UCySWyRPHzYQ8EKHU0U4E3_g";
+  const PLAYLIST_ID = "PL3TqreMFEPyHssgIdi-Toq0546IGOoz9t";
   const API_KEY = "AIzaSyC0o-dNMlHnf8YW6PgHmpqjdF1U4T4GPfo";
   const videoContainer = document.getElementById("videoContainer");
   const showMoreBtn = document.getElementById("showMoreBtn");
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loadingSpinner.classList.remove("hidden");
 
       const response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${CHANNEL_ID}&maxResults=10&order=date&type=video&key=${API_KEY}`
+        `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${PLAYLIST_ID}&maxResults=10&key=${API_KEY}`
       );
 
       if (!response.ok) {
