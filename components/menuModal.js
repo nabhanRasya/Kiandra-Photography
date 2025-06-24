@@ -27,7 +27,7 @@ class menuModal extends HTMLElement {
               class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">Contact</a>
           </li>
           <li>
-            <a href="https://wa.me/6285187382144?text=Halo%2C%20saya%20ingin%20tanya%20pricelist." target="_blank" class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">
+            <a href="https://wa.me/62895376055400?text=Halo%2C%20saya%20ingin%20tanya%20pricelist." target="_blank" class="hover:underline underline-offset-4 decoration-1 hover:transition-all hover:duration-300">
   Ask Pricelist
 </a>
 

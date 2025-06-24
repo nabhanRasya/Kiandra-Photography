@@ -9,7 +9,7 @@ class footer extends HTMLElement {
               <img
                 src="../../assets/logo/enter-logo.png"
                 alt="Kiandra Photography"
-                class="h-14 md:h-16 mb-2" />
+                class="h-12 md:h-14" />
             </div>
 
             <!-- Contact Section -->
@@ -17,13 +17,13 @@ class footer extends HTMLElement {
               <h3 class="text-xl font-light text-neutral-800 mb-4">
                 Get in Touch
               </h3>
-              <div class="mb-4 text-md font-regular opacity-60">
+              <div class="mb-4 text-md font-light opacity-60">
                 <p class="text-neutral-600 mb-1">mail@kiandraphotography.com</p>
-                <p class="text-neutral-600">+62 856-9228-0704</p>
+                <p class="text-neutral-600">+62 8953-7605-5400</p>
               </div>
 
               <!-- Social Icons -->
-              <div class="flex justify-center md:justify-end space-x-4">
+              <div class="flex justify-center md:justify-end gap-4">
                 <!-- YouTube -->
 <a href="https://www.youtube.com/@kiandraproduction" 
    target="_blank" 

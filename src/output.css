@@ -50,6 +50,7 @@
     --font-weight-thin: 100;
     --font-weight-light: 300;
     --font-weight-semibold: 600;
+    --font-weight-medium: 600;
     --font-weight-bold: 700;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
@@ -580,6 +581,7 @@
   .inline-grid {
     display: inline-grid;
   }
+
   .inline-table {
     display: inline-table;
   }
@@ -1915,6 +1917,11 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+
+  .font-regular {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
   }
   .font-thin {
     --tw-font-weight: var(--font-weight-thin);
