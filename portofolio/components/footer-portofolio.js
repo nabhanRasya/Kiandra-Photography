@@ -41,7 +41,7 @@ class footer extends HTMLElement {
 </a>
 
 <!-- WhatsApp -->
-<a href="https://wa.me/6285692280704" 
+<a href="https://wa.me/62895376055400" 
    target="_blank" 
    rel="noopener noreferrer"
    class="text-neutral-500 hover:text-neutral-800 transition duration-300 bg-neutral-50 px-3 py-2 rounded-full">
