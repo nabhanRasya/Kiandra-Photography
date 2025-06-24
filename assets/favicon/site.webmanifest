@@ -7,23 +7,23 @@
   "theme_color": "#ffffff",
   "icons": [
     {
-      "src": "/assets/favicon/light-favicon-192x192.png",
+      "src": "assets/favicon/light-favicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/favicon/light-favicon-512x512.png",
+      "src": "assets/favicon/light-favicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/assets/favicon/dark-favicon-192x192.png",
+      "src": "assets/favicon/dark-favicon-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any dark"
     },
     {
-      "src": "/assets/favicon/dark-favicon-512x512.png",
+      "src": "assets/favicon/dark-favicon-512x512.png",
       "type": "image/png",
       "sizes": "512x512",
       "purpose": "any dark"
